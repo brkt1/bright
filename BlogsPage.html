@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>
+        Be Light Insights - Technology Blog
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#013580',
+                        'accent-teal': '#23B5B5',
+                        'neon-accent': '#00FFD1',
+                        'dark-navy': '#010C2A'
+                    },
+                    fontFamily: {
+                        'heading': ['Futura PT', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-navy text-white font-body">
+    <!-- Header Navigation -->
+    <header class="fixed w-full z-50 bg-primary-blue/30 backdrop-blur-lg">
+        <nav class="container mx-auto flex justify-between items-center p-4">
+            <div class="logo">
+                <img alt="Be Light Logo - A stylized light bulb with rays emanating from it, symbolizing innovation and ideas" class="h-12" src="logo.png"/>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a class="nav-link hover:text-accent-cyan transition-all" href="#">
+                    Home
+                   </a>
+                   <a class="nav-link hover:text-accent-cyan transition-all" href="AboutUs.html">
+                    About Us
+                   </a>
+                   <a class="nav-link hover:text-accent-cyan transition-all" href="internshipPprogram.html">
+                    Internship
+                   </a>
+                   <a class="nav-link hover:text-accent-cyan transition-all" href="BlogsPage.html">
+                    Blogs
+                   </a>
+                   <a class="nav-link hover:text-accent-cyan transition-all" href="GetQuotePage.html">
+                    Get Quote
+                   </a>
+                   <a class="nav-link hover:text-accent-cyan transition-all" href="VacancyPage.html">
+                      Vacancy
+                     </a>
+                    </div>
+        </nav>
+    </header>
+    <!-- Page Header -->
+    <section class="relative h-[400px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-primary-blue opacity-90"></div>
+        <div class="container mx-auto text-center relative z-10">
+            <h1 class="text-5xl font-heading font-bold mb-4 text-white">Be Light Insights</h1>
+            <p class="text-2xl text-neon-accent">Exploring Technology, Innovation, and Digital Transformation</p>
+        </div>
+    </section>
+    <!-- Search and Filter Section -->
+    <section class="container mx-auto py-12 px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="relative">
+                <input class="w-full p-4 rounded-full bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-neon-accent" placeholder="Search articles, topics, or keywords" type="text"/>
+                <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-neon-accent text-primary-blue p-2 rounded-full">
+                    <i data-feather="search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Category Navigation -->
+    <section class="container mx-auto py-8">
+        <div class="flex flex-wrap justify-center gap-4">
+            <button class="category-btn bg-white/10 px-4 py-2 rounded-full hover:bg-neon-accent hover:text-primary-blue transition-all">Technology Trends</button>
+            <button class="category-btn bg-white/10 px-4 py-2 rounded-full hover:bg-neon-accent hover:text-primary-blue transition-all">Digital Transformation</button>
+            <button class="category-btn bg-white/10 px-4 py-2 rounded-full hover:bg-neon-accent hover:text-primary-blue transition-all">AI &amp; Innovation</button>
+            <button class="category-btn bg-white/10 px-4 py-2 rounded-full hover:bg-neon-accent hover:text-primary-blue transition-all">Case Studies</button>
+        </div>
+    </section>
+    <!-- Featured Article -->
+    <section class="container mx-auto py-16">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+                <img alt="Featured Article - A futuristic cityscape with AI elements integrated into the environment" class="rounded-xl shadow-lg" src="https://placehold.co/600x400"/>
+            </div>
+            <div>
+                <span class="text-neon-accent font-bold uppercase tracking-wide">Featured Article</span>
+                <h2 class="text-3xl font-heading font-bold my-4">The AI Revolution: Transforming Business Intelligence in 2024</h2>
+                <p class="text-gray-300 mb-4">Explore how artificial intelligence is reshaping business strategies and creating unprecedented opportunities for innovation.</p>
+                <div class="flex items-center space-x-4">
+                    <img alt="Maria Rodriguez - A professional woman with glasses and a confident smile" class="w-12 h-12 rounded-full" src="https://placehold.co/100x100"/>
+                    <div>
+                        <p class="font-bold">Maria Rodriguez</p>
+                        <p class="text-sm text-gray-400">7 min read</p>
+                    </div>
+                </div>
+                <button class="mt-6 bg-neon-accent text-primary-blue px-6 py-3 rounded-full hover:scale-105 transition-transform" title="Read the full article">Read Full Article</button>
+            </div>
+        </div>
+    </section>
+    <!-- Recent Articles Grid -->
+    <section class="container mx-auto py-16">
+        <h2 class="text-3xl font-heading text-center mb-12">Recent Articles</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Article Card 1 -->
+            <div class="bg-white/10 rounded-xl overflow-hidden">
+                <img alt="Article Thumbnail - A team of professionals discussing digital transformation strategies" class="w-full h-48 object-cover" src="https://placehold.co/400x300"/>
+                <div class="p-6">
+                    <span class="text-neon-accent text-sm uppercase">Digital Strategy</span>
+                    <h3 class="text-xl font-bold my-2">Navigating Digital Transformation Challenges</h3>
+                    <p class="text-gray-300 mb-4">Practical insights for businesses looking to modernize their digital infrastructure.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-400">5 min read</span>
+                        <a class="text-neon-accent hover:underline" href="#" title="Read more about this article">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Article Card 2 -->
+            <div class="bg-white/10 rounded-xl overflow-hidden">
+                <img alt="Article Thumbnail - A close-up of a robotic hand interacting with a human hand" class="w-full h-48 object-cover" src="https://placehold.co/400x300"/>
+                <div class="p-6">
+                    <span class="text-neon-accent text-sm uppercase">AI &amp; Innovation</span>
+                    <h3 class="text-xl font-bold my-2">The Future of Human-AI Collaboration</h3>
+                    <p class="text-gray-300 mb-4">How AI is enhancing human capabilities and transforming industries.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-400">6 min read</span>
+                        <a class="text-neon-accent hover:underline" href="#" title="Read more about this article">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Article Card 3 -->
+            <div class="bg-white/10 rounded-xl overflow-hidden">
+                <img alt="Article Thumbnail - A futuristic interface displaying data analytics and business intelligence" class="w-full h-48 object-cover" src="https://placehold.co/400x300"/>
+                <div class="p-6">
+                    <span class="text-neon-accent text-sm uppercase">Business Intelligence</span>
+                    <h3 class="text-xl font-bold my-2">Leveraging Data for Strategic Decisions</h3>
+                    <p class="text-gray-300 mb-4">The role of data analytics in driving business success.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-400">4 min read</span>
+                        <a class="text-neon-accent hover:underline" href="#" title="Read more about this article">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Newsletter Signup -->
+    <section class="bg-primary-blue py-16">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-heading mb-4">Stay Updated with Be Light Insights</h2>
+            <p class="text-gray-300 mb-8">Receive our latest articles, tech trends, and innovation insights directly in your inbox.</p>
+            <div class="max-w-xl mx-auto flex">
+                <input class="flex-1 p-4 rounded-l-full bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-neon-accent" placeholder="Enter your email address" type="email"/>
+                <button class="bg-neon-accent text-primary-blue px-6 rounded-r-full">Subscribe</button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark-navy py-12">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-400">© 2023 Be Light. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a class="text-neon-accent hover:underline" href="#">Privacy Policy</a>
+                <a class="text-neon-accent hover:underline" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>

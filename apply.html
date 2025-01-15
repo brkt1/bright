@@ -1,0 +1,213 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application - Be Light</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#013580',
+                        'accent-teal': '#23B5B5',
+                        'neon-accent': '#00FFD1',
+                        'soft-white': '#F5F5F5',
+                        'dark-navy': '#010C2A'
+                    },
+                    fontFamily: {
+                        'heading': ['Futura PT', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body 
+    x-data="jobApplicationForm()" 
+    class="bg-dark-navy text-white font-body"
+>
+    <!-- Application Form Container -->
+    <div class="min-h-screen flex items-center justify-center p-6">
+        <div class="w-full max-w-4xl">
+            <div class="bg-white/10 rounded-2xl shadow-2xl overflow-hidden">
+                <!-- Form Header -->
+                <div class="bg-primary-blue/50 px-8 py-6 border-b border-white/10">
+                    <h2 class="text-3xl font-bold text-neon-accent">
+                        Job Application
+                    </h2>
+                    <p class="text-gray-300 mt-2">
+                        Senior Software Engineer - Technology Department
+                    </p>
+                </div>
+
+                <!-- Application Form -->
+                <form @submit.prevent="submitApplication" class="p-8">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Personal Information -->
+                        <div class="space-y-6">
+                            <h3 class="text-xl font-bold text-accent-teal border-b pb-2">
+                                Personal Information
+                            </h3>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm text-gray-300 mb-2">First Name</label>
+                                    <input 
+                                        type="text" 
+                                        x-model="application.firstName"
+                                        class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                                        placeholder="John"
+                                        required
+                                    >
+                                </div>
+                                <div>
+                                    <label class="block text-sm text-gray-300 mb-2">Last Name</label>
+                                    <input 
+                                        type="text" 
+                                        x-model="application.lastName"
+                                        class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                                        placeholder="Doe"
+                                        required
+                                    >
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm text-gray-300 mb-2">Email Address</label>
+                                <input 
+                                    type="email" 
+                                    x-model="application.email"
+                                    class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                                    placeholder="john.doe@example.com"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label class="block text-sm text-gray-300 mb-2">Phone Number</label>
+                                <input 
+                                    type="tel" 
+                                    x-model="application.phone"
+                                    class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                                    placeholder="+1 (123) 456-7890"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Professional Information -->
+                        <div class="space-y-6">
+                            <h3 class="text-xl font-bold text-accent-teal border-b pb-2">
+                                Professional Details
+                            </h3>
+                            
+                            <div>
+                                <label class="block text-sm text-gray-300 mb-2">Current Job Title</label>
+                                <input 
+                                    type="text" 
+                                    x-model="application.currentJobTitle"
+                                    class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                                    placeholder="Software Engineer"
+                                >
+                            </div>
+
+                            <div>
+                                <label class="block text-sm text-gray-300 mb-2">Upload Resume</label>
+                                <div 
+                                    class="w-full bg-white/10 p-4 rounded-lg border-2 border-dashed border-accent-teal/50 text-center"
+                                    x-data="{ fileName: '' }"
+                                >
+                                    <input 
+                                        type="file" 
+                                        @change="fileName = $event.target.files[0].name"
+                                        class="hidden"
+                                        id="resume-upload"
+                                        accept=".pdf,.doc,.docx"
+                                    >
+                                    <label 
+                                        for="resume-upload" 
+                                        class="cursor-pointer text-gray-300 hover:text-neon-accent"
+                                    >
+                                        <span x-text="fileName || 'Click to upload resume'"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm text-gray-300 mb-2">LinkedIn Profile</label>
+                                <input 
+                                    type="url" 
+                                    x-model="application.linkedinProfile"
+                                    class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                                    placeholder="https://linkedin.com/in/yourprofile"
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold text-accent-teal border-b pb-2">
+                            Additional Information
+                        </h3>
+                        <textarea 
+                            x-model="application.additionalInfo"
+                            class="w-full mt-4 bg-white/10 p-4 rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                            placeholder="Tell us why you're interested in this position and what makes you a great fit..."
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="mt-8 flex justify-between items-center">
+                        <div class="flex items-center">
+                            <input 
+                                type="checkbox" 
+                                x-model="application.termsAccepted"
+                                class="mr-2 bg-white/10 text-neon-accent focus:ring-neon-accent"
+                                required
+                            >
+                            <label class="text-sm text-gray-300">I accept the terms and conditions</label>
+                        </div>
+                        <button 
+                            type="submit" 
+                            class="bg-neon-accent text-primary-blue px-6 py-2 rounded-full hover:scale-105 transition-transform"
+                        >
+                            Submit Application
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function jobApplicationForm() {
+            return {
+                application: {
+                    firstName: '',
+                    lastName: '',
+                    email: '',
+                    phone: '',
+                    currentJobTitle: '',
+                    linkedinProfile: '',
+                    additionalInfo: '',
+                    termsAccepted: false
+                },
+                submitApplication() {
+                    if (this.application.termsAccepted) {
+                        alert('Application submitted successfully!');
+                        // Here you can add the logic to handle the form submission
+                    } else {
+                        alert('Please accept the terms and conditions.');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

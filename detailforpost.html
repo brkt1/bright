@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>
+        Job Details - Senior Software Engineer | Be Light
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#013580',
+                        'accent-teal': '#23B5B5',
+                        'neon-accent': '#00FFD1',
+                        'soft-white': '#F5F5F5',
+                        'dark-navy': '#010C2A'
+                    },
+                    fontFamily: {
+                        'heading': ['Futura PT', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                        'job-desc': ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-navy text-white font-body">
+    <!-- Enhanced Navigation -->
+    <header class="fixed w-full z-50 bg-primary-blue/30 backdrop-blur-lg">
+        <nav class="container mx-auto flex justify-between items-center p-4">
+            <div class="flex items-center">
+                <img alt="Be Light Logo, a stylized light bulb with rays emanating from it" class="h-12 mr-8" src="logo.png"/>
+                <div class="hidden md:flex space-x-6">
+                    <a class="nav-link hover:text-accent-cyan transition-all" href="Homepage.html">
+                        Home
+                       </a>
+                       <a class="nav-link hover:text-accent-cyan transition-all" href="AboutUs.html">
+                        About Us
+                       </a>
+                       <a class="nav-link hover:text-accent-cyan transition-all" href="internshipPprogram.html">
+                        Internship
+                       </a>
+                       <a class="nav-link hover:text-accent-cyan transition-all" href="BlogsPage.html">
+                        Blogs
+                       </a>
+                       <a class="nav-link hover:text-accent-cyan transition-all" href="GetQuotePage.html">
+                        Get Quote
+                       </a>
+                       <a class="nav-link hover:text-accent-cyan transition-all" href="VacancyPage.html">
+                          Vacancy
+                         </a>
+                        </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="bg-neon-accent text-primary-blue px-4 py-2 rounded-full hover:scale-105 transition-transform" title="Apply for the Senior Software Engineer position">
+                    Apply Now
+                </button>
+                <div class="mobile-menu md:hidden">
+                    <button>
+                        <i class="w-6 h-6" data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Job Details Hero Section -->
+    <section class="container mx-auto pt-24 pb-12">
+        <div class="bg-white/10 p-8 rounded-xl">
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-4xl font-bold text-neon-accent">Senior Software Engineer</h1>
+                <span class="bg-accent-teal text-white px-4 py-2 rounded-full">Technology Department</span>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Job Overview -->
+                <div class="col-span-2">
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold mb-4 text-accent-teal">Job Overview</h2>
+                        <p class="text-gray-300 leading-relaxed">
+                            As a Senior Software Engineer, you will be responsible for designing complex software solutions, leading technical implementations, and mentoring junior developers. This role requires a strong background in full-stack development and cloud architecture.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 text-accent-teal">Key Responsibilities:</h3>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2">
+                            <li>Design and architect scalable software solutions</li>
+                            <li>Lead technical implementation of complex projects</li>
+                            <li>Mentor and guide junior developers</li>
+                            <li>Collaborate with cross-functional teams</li>
+                            <li>Ensure code quality and best practices</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Job Details Sidebar -->
+                <div class="bg-white/10 p-6 rounded-xl">
+                    <h3 class="text-xl font-bold mb-4 text-accent-teal">Job Snapshot</h3>
+                    <div class="space-y-4 text-gray-300">
+                        <div><strong>Location:</strong> <span>Hybrid (Remote/Office)</span></div>
+                        <div><strong>Salary Range:</strong> <span>$120,000 - $150,000</span></div>
+                        <div><strong>Experience:</strong> <span>5+ Years</span></div>
+                        <div><strong>Employment Type:</strong> <span>Full-Time</span></div>
+                        <div><strong>Department:</strong> <span>Technology</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8">
+                <h3 class="text-xl font-bold mb-4 text-accent-teal">Required Skills:</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Expert-level Full-Stack Development</li>
+                        <li>Cloud Architecture Experience</li>
+                        <li>Microservices Design</li>
+                        <li>CI/CD Pipelines</li>
+                    </ul>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Advanced JavaScript/TypeScript</li>
+                        <li>React/Node.js Expertise</li>
+                        <li>AWS/Azure Cloud Platforms</li>
+                        <li>Strong System Design Skills</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 bg-primary-blue/20 p-6 rounded-xl">
+                <h3 class="text-xl font-bold mb-4 text-accent-teal">Application Process:</h3>
+                <ol class="list-decimal list-inside text-gray-300 space-y-2">
+                    <li>Online Application Submission</li>
+                    <li>Initial Resume Screening</li>
+                    <li>Technical Assessment</li>
+                    <li>Technical Interview</li>
+                    <li>Leadership Interview</li>
+                    <li>Final Selection</li>
+                </ol>
+            </div>
+            <div class="mt-8 flex space-x-4">
+                <a class="bg-neon-accent text-primary-blue px-6 py-2 rounded-full hover:scale-105 transition-transform" href="/apply.html">Apply Now</a>
+                <a class="bg-accent-teal text-white px-6 py-2 rounded-full hover:scale-105 transition-transform" href="/careers.html">Back to Careers</a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark-navy py-12">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-400">© 2023 Be Light. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a class="text-neon-accent hover:underline" href="#">Privacy Policy</a>
+                <a class="text-neon-accent hover:underline" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+    </script>
+</body>
+</html>

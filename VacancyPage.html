@@ -1,0 +1,489 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Job Openings at Be Light
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script src="https://unpkg.com/feather-icons">
+  </script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <script>
+   tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#013580',
+                        'accent-teal': '#23B5B5',
+                        'neon-accent': '#00FFD1',
+                        'soft-white': '#F5F5F5',
+                        'dark-navy': '#010C2A'
+                    },
+                    fontFamily: {
+                        'heading': ['Futura PT', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                        'job-desc': ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+  </script>
+ </head>
+ <body class="bg-dark-navy text-white font-body" x-data="jobListingSystem()">
+  <!-- Enhanced Navigation -->
+  <header class="fixed w-full z-50 bg-primary-blue/30 backdrop-blur-lg">
+   <nav class="container mx-auto flex justify-between items-center p-4">
+    <div class="flex items-center">
+     <img alt="Be Light Logo, a stylized light bulb with rays emanating from it" class="h-12 mr-8" src="logo.png"/>
+     <div class="hidden md:flex space-x-6">
+        <a class="nav-link hover:text-accent-cyan transition-all" href="Homepage.html">
+            Home
+           </a>
+           <a class="nav-link hover:text-accent-cyan transition-all" href="AboutUs.html">
+            About Us
+           </a>
+           <a class="nav-link hover:text-accent-cyan transition-all" href="internshipPprogram.html">
+            Internship
+           </a>
+           <a class="nav-link hover:text-accent-cyan transition-all" href="BlogsPage.html">
+            Blogs
+           </a>
+           <a class="nav-link hover:text-accent-cyan transition-all" href="GetQuotePage.html">
+            Get Quote
+           </a>
+           <a class="nav-link hover:text-accent-cyan transition-all" href="VacancyPage.html">
+              Vacancy
+             </a>
+     </div>
+    </div>
+    <div class="flex items-center space-x-4">
+     <button class="bg-neon-accent text-primary-blue px-4 py-2 rounded-full hover:scale-105 transition-transform">
+      Apply Now
+     </button>
+     <div class="mobile-menu md:hidden">
+      <button @click="mobileMenuOpen = !mobileMenuOpen">
+       <i class="w-6 h-6" data-feather="menu">
+       </i>
+      </button>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <!-- Page Hero Section -->
+  <section class="relative h-[400px] flex items-center justify-center overflow-hidden pt-20">
+   <div class="absolute inset-0 bg-gradient-to-br from-primary-blue to-dark-navy opacity-90">
+   </div>
+   <div class="container mx-auto text-center relative z-10">
+    <h1 class="text-5xl md:text-6xl font-heading font-bold mb-6 text-white">
+     Job Openings
+    </h1>
+    <p class="text-2xl md:text-3xl mb-8 text-neon-accent">
+     Discover Your Next Career Opportunity
+    </p>
+   </div>
+  </section>
+  <!-- Job Listings Section -->
+  <section class="container mx-auto py-16">
+   <div class="mb-12 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+    <h2 class="text-4xl font-heading text-neon-accent">
+     Current Openings
+    </h2>
+    <!-- Filtering and Sorting Controls -->
+    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+     <!-- Department Filter -->
+     <select class="bg-white/10 text-white p-2 rounded" x-model="selectedDepartment">
+      <option value="">
+       All Departments
+      </option>
+      <option value="Technology">
+       Technology
+      </option>
+      <option value="Marketing">
+       Marketing
+      </option>
+      <option value="Design">
+       Design
+      </option>
+      <option value="Analytics">
+       Analytics
+      </option>
+     </select>
+     <!-- Location Filter -->
+     <select class="bg-white/10 text-white p-2 rounded" x-model="selectedLocation">
+      <option value="">
+       All Locations
+      </option>
+      <option value="Remote">
+       Remote
+      </option>
+      <option value="Hybrid">
+       Hybrid
+      </option>
+      <option value="On-site">
+       On-site
+      </option>
+     </select>
+     <!-- Salary Sorting -->
+     <select class="bg-white/10 text-white p-2 rounded" x-model="salarySort">
+      <option value="">
+       Sort by Salary
+      </option>
+      <option value="asc">
+       Low to High
+      </option>
+      <option value="desc">
+       High to Low
+      </option>
+     </select>
+    </div>
+   </div>
+   <!-- Job Listing Grid -->
+   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <template x-for="job in filteredAndSortedJobs">
+     <div class="bg-white/10 p-6 rounded-xl transform transition-all hover:scale-105 hover:shadow-lg">
+      <div class="flex justify-between items-center mb-4">
+       <h3 class="text-2xl font-bold text-accent-teal" x-text="job.title">
+       </h3>
+       <span class="bg-neon-accent/20 text-neon-accent px-3 py-1 rounded-full text-sm">
+        <span x-text="job.department">
+        </span>
+       </span>
+      </div>
+      <div class="text-gray-300">
+       <div class="flex justify-between mb-4">
+        <p>
+         <strong>
+          Location:
+         </strong>
+         <span x-text="job.location">
+         </span>
+        </p>
+        <p>
+         <strong>
+          Salary:
+         </strong>
+         <span x-text="job.salaryRange">
+         </span>
+        </p>
+       </div>
+       <div class="mt-4">
+        <h4 class="font-bold mb-2">
+         Key Responsibilities:
+        </h4>
+        <ul class="list-disc list-inside space-y-1">
+         <template x-for="responsibility in job.responsibilities">
+          <li class="text-sm" x-text="responsibility">
+          </li>
+         </template>
+        </ul>
+       </div>
+       <div class="mt-4">
+        <h4 class="font-bold mb-2">
+         Required Skills:
+        </h4>
+        <ul class="list-disc list-inside space-y-1">
+         <template x-for="skill in job.requiredSkills">
+          <li class="text-sm" x-text="skill">
+          </li>
+         </template>
+        </ul>
+       </div>
+       <a href="detailforpost.html" class="mt-6 inline-block bg-neon-accent text-primary-blue px-6 py-2 rounded-full hover:scale-105 transition-transform">
+        View Details
+       </a>
+      </div>
+     </div>
+    </template>
+   </div>
+  </section>
+  <script>
+   function jobListingSystem() {
+            return {
+                jobs: [
+                    {
+                        id: 1,
+                        title: 'Senior Software Engineer',
+                        department: 'Technology',
+                        location: 'Hybrid',
+                        salaryRange: '$120,000 - $150,000',
+                        responsibilities: [
+                            'Design complex software solutions',
+                            'Lead technical implementation',
+                            'Mentor junior developers'
+                        ],
+                        requiredSkills: [
+                            '5+ Years Experience',
+                            'Full-Stack Development',
+                            'Cloud Architecture'
+                        ]
+                    },
+                    {
+                        id: 2,
+                        title: 'Marketing Specialist',
+                        department: 'Marketing',
+                        location: 'Remote',
+                        salaryRange: '$60,000 - $80,000',
+                        responsibilities: [
+                            'Develop marketing strategies',
+                            'Manage social media campaigns',
+                            'Analyze market trends'
+                        ],
+                        requiredSkills: [
+                            '3+ Years Experience',
+                            'SEO/SEM',
+                            'Content Creation'
+                        ]
+                    },
+                    {
+                        id: 3,
+                        title: 'UI/UX Designer',
+                        department: 'Design',
+                        location: 'On-site',
+                        salaryRange: '$70,000 - $90,000',
+                        responsibilities: [
+                            'Create user-centered designs',
+                            'Conduct user research',
+                            'Collaborate with developers'
+                        ],
+                        requiredSkills: [
+                            '4+ Years Experience',
+                            'Prototyping Tools',
+                            'User Research'
+                        ]
+                    },
+                    {
+                        id: 4,
+                        title: 'Data Analyst',
+                        department: 'Analytics',
+                        location: 'Hybrid',
+                        salaryRange: '$80,000 - $100,000',
+                        responsibilities: [
+                            'Analyze data sets',
+                            'Generate reports',
+                            'Provide insights'
+                        ],
+                        requiredSkills: [
+                            '3+ Years Experience',
+                            'SQL',
+                            'Data Visualization'
+                        ]
+                    },
+                    {
+                        id: 5,
+                        title: 'Product Manager',
+                        department: 'Technology',
+                        location: 'Remote',
+                        salaryRange: '$110,000 - $130,000',
+                        responsibilities: [
+                            'Define product vision',
+                            'Manage product lifecycle',
+                            'Coordinate with stakeholders'
+                        ],
+                        requiredSkills: [
+                            '5+ Years Experience',
+                            'Agile Methodologies',
+                            'Leadership Skills'
+                        ]
+                    },
+                    {
+                        id: 6,
+                        title: 'Graphic Designer',
+                        department: 'Design',
+                        location: 'On-site',
+                        salaryRange: '$50,000 - $70,000',
+                        responsibilities: [
+                            'Create visual content',
+                            'Develop brand guidelines',
+                            'Collaborate with marketing team'
+                        ],
+                        requiredSkills: [
+                            '2+ Years Experience',
+                            'Adobe Creative Suite',
+                            'Creativity'
+                        ]
+                    },
+                    {
+                        id: 7,
+                        title: 'SEO Specialist',
+                        department: 'Marketing',
+                        location: 'Remote',
+                        salaryRange: '$55,000 - $75,000',
+                        responsibilities: [
+                            'Optimize website content',
+                            'Conduct keyword research',
+                            'Monitor SEO performance'
+                        ],
+                        requiredSkills: [
+                            '3+ Years Experience',
+                            'SEO Tools',
+                            'Analytical Skills'
+                        ]
+                    },
+                    {
+                        id: 8,
+                        title: 'DevOps Engineer',
+                        department: 'Technology',
+                        location: 'Hybrid',
+                        salaryRange: '$100,000 - $120,000',
+                        responsibilities: [
+                            'Manage CI/CD pipelines',
+                            'Automate infrastructure',
+                            'Monitor system performance'
+                        ],
+                        requiredSkills: [
+                            '4+ Years Experience',
+                            'Cloud Platforms',
+                            'Scripting Languages'
+                        ]
+                    },
+                    {
+                        id: 9,
+                        title: 'Content Writer',
+                        department: 'Marketing',
+                        location: 'Remote',
+                        salaryRange: '$45,000 - $65,000',
+                        responsibilities: [
+                            'Write engaging content',
+                            'Edit and proofread articles',
+                            'Collaborate with designers'
+                        ],
+                        requiredSkills: [
+                            '2+ Years Experience',
+                            'Excellent Writing Skills',
+                            'SEO Knowledge'
+                        ]
+                    },
+                    {
+                        id: 10,
+                        title: 'Business Analyst',
+                        department: 'Analytics',
+                        location: 'On-site',
+                        salaryRange: '$85,000 - $105,000',
+                        responsibilities: [
+                            'Analyze business processes',
+                            'Identify improvement areas',
+                            'Develop business strategies'
+                        ],
+                        requiredSkills: [
+                            '4+ Years Experience',
+                            'Analytical Skills',
+                            'Communication Skills'
+                        ]
+                    },
+                    {
+                        id: 11,
+                        title: 'Frontend Developer',
+                        department: 'Technology',
+                        location: 'Hybrid',
+                        salaryRange: '$90,000 - $110,000',
+                        responsibilities: [
+                            'Develop user interfaces',
+                            'Optimize web performance',
+                            'Collaborate with backend developers'
+                        ],
+                        requiredSkills: [
+                            '3+ Years Experience',
+                            'JavaScript Frameworks',
+                            'Responsive Design'
+                        ]
+                    },
+                    {
+                        id: 12,
+                        title: 'Social Media Manager',
+                        department: 'Marketing',
+                        location: 'Remote',
+                        salaryRange: '$50,000 - $70,000',
+                        responsibilities: [
+                            'Manage social media accounts',
+                            'Create content calendars',
+                            'Engage with followers'
+                        ],
+                        requiredSkills: [
+                            '2+ Years Experience',
+                            'Social Media Tools',
+                            'Creativity'
+                        ]
+                    },
+                    {
+                        id: 13,
+                        title: 'Backend Developer',
+                        department: 'Technology',
+                        location: 'On-site',
+                        salaryRange: '$95,000 - $115,000',
+                        responsibilities: [
+                            'Develop server-side logic',
+                            'Integrate with databases',
+                            'Ensure high performance'
+                        ],
+                        requiredSkills: [
+                            '4+ Years Experience',
+                            'Server-Side Languages',
+                            'Database Management'
+                        ]
+                    },
+                    {
+                        id: 14,
+                        title: 'UI Designer',
+                        department: 'Design',
+                        location: 'Hybrid',
+                        salaryRange: '$65,000 - $85,000',
+                        responsibilities: [
+                            'Design user interfaces',
+                            'Create design systems',
+                            'Collaborate with UX designers'
+                        ],
+                        requiredSkills: [
+                            '3+ Years Experience',
+                            'UI Design Tools',
+                            'Attention to Detail'
+                        ]
+                    },
+                    {
+                        id: 15,
+                        title: 'Data Scientist',
+                        department: 'Analytics',
+                        location: 'Remote',
+                        salaryRange: '$110,000 - $130,000',
+                        responsibilities: [
+                            'Analyze large data sets',
+                            'Build predictive models',
+                            'Communicate insights'
+                        ],
+                        requiredSkills: [
+                            '5+ Years Experience',
+                            'Machine Learning',
+                            'Statistical Analysis'
+                        ]
+                    }
+                ],
+                selectedDepartment: '',
+                selectedLocation: '',
+                salarySort: '',
+
+                get filteredAndSortedJobs() {
+                    return this.jobs
+                        .filter(job => 
+                            (!this.selectedDepartment || job.department === this.selectedDepartment) &&
+                            (!this.selectedLocation || job.location === this.selectedLocation)
+                        )
+                        .sort((a, b) => {
+                            if (this.salarySort === 'asc') {
+                                return parseInt(a.salaryRange.split('-')[0].replace('$', '')) - 
+                                       parseInt(b.salaryRange.split('-')[0].replace('$', ''));
+                            }
+                            if (this.salarySort === 'desc') {
+                                return parseInt(b.salaryRange.split('-')[0].replace('$', '')) - 
+                                       parseInt(a.salaryRange.split('-')[0].replace('$', ''));
+                            }
+                            return 0;
+                        });
+                }
+            }
+        }
+  </script>
+ </body>
+</html>
