@@ -17,7 +17,6 @@
                         'primary-blue': '#013580',
                         'accent-teal': '#23B5B5',
                         'neon-accent': '#00FFD1',
-                        'dark-navy': '#010C2A'
                     },
                     fontFamily: {
                         'heading': ['Futura PT', 'sans-serif'],
@@ -30,43 +29,86 @@
  </head>
  <body class="bg-dark-navy text-white font-body">
   <!-- Header Navigation -->
-  <header class="fixed w-full z-50 bg-primary-blue/30 backdrop-blur-lg">
-   <nav class="container mx-auto flex justify-between items-center p-4">
-    <div class="logo">
-     <img alt="Be Light Logo with a light bulb icon and the text 'Be Light' in a modern font" class="h-12" src="logo.png"/>
-    </div>
-    <div class="hidden md:flex space-x-6">
-        <a class="nav-link hover:text-accent-cyan transition-all" href="Homepage.html">
-            Home
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="AboutUs.html">
-            About Us
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="internshipPprogram.html">
-            Internship
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="BlogsPage.html">
-            Blogs
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="GetQuotePage.html">
-            Get Quote
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="VacancyPage.html">
-              Vacancy
-             </a>
-    </div>
-   </nav>
+  <header class="fixed w-full z-50 bg-white/70 backdrop-blur-lg shadow-sm">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
+      <div class="flex items-center">
+        <img 
+          alt="Be Light Logo" 
+          class="h-10 md:h-12 w-auto transition-transform hover:scale-105" 
+          src="logo.png"
+        />
+      </div>
+  
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Home
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="AboutUs.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          About Us
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="internshipPprogram.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Internship
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="BlogsPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Blogs
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="GetQuotePage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Get Quote
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="VacancyPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Vacancy
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+      </div>
+  
+      <div class="hidden md:block">
+        <a 
+          href="GetQuotePage.html" 
+          class="px-4 py-2   text-black-navy rounded-full text-sm hover:bg-blue-100 transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+  
+      <!-- Mobile Menu Toggle -->
+      <div class="md:hidden">
+        <button 
+          aria-label="Mobile Menu" 
+          class="text-gray-700 hover:text-blue-600 transition-colors"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            class="h-6 w-6" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
   </header>
   <!-- Page Header -->
   <section class="relative h-[400px] flex items-center justify-center overflow-hidden">
    <img alt="Abstract background with blue and teal gradient" class="absolute inset-0 w-full h-full object-cover" src="https://placehold.co/1920x400"/>
-   <div class="absolute inset-0 bg-primary-blue opacity-90">
+   <div class="absolute inset-0  opacity-90">
    </div>
    <div class="container mx-auto text-center relative z-10">
     <h1 class="text-5xl font-heading font-bold mb-4 text-white">
      Be Light Internship Program
     </h1>
-    <p class="text-2xl text-neon-accent">
+    <p class="text-2xl text-primary-blue">
      Launching Careers, Transforming Futures
     </p>
    </div>
@@ -74,10 +116,10 @@
   <!-- Program Introduction -->
   <section class="container mx-auto py-16 px-4">
    <div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-4xl font-heading font-bold mb-8 text-neon-accent">
+    <h2 class="text-4xl font-heading font-bold mb-8 text-primary-blue">
      Our Vision
     </h2>
-    <p class="text-xl text-gray-300 leading-relaxed">
+    <p class="text-xl text-gray-900 leading-relaxed">
      At Be Light, we believe in nurturing the next generation of technological innovators. 
                 Our internship program is more than an opportunity—it's a transformative journey 
                 that empowers young talents to shape the future of digital innovation.
@@ -87,17 +129,17 @@
   <!-- Internship Highlights -->
   <section class="bg-primary-blue/20 py-16">
    <div class="container mx-auto">
-    <h2 class="text-4xl font-heading text-center mb-12 text-neon-accent">
+    <h2 class="text-4xl font-heading text-center mb-12 text-primary-blue">
      Program Highlights
     </h2>
     <div class="grid md:grid-cols-3 gap-8">
      <div class="bg-white/10 p-6 rounded-xl text-center">
-      <i class="w-16 h-16 mx-auto mb-4 text-neon-accent" data-feather="activity">
+      <i class="w-16 h-16 mx-auto mb-4 text-primary-blue" data-feather="activity">
       </i>
       <h3 class="text-2xl font-bold mb-4">
        Real-World Experience
       </h3>
-      <ul class="text-gray-300 space-y-2">
+      <ul class="text-gray-900 space-y-2">
        <li>
         Hands-on project involvement
        </li>
@@ -110,12 +152,12 @@
       </ul>
      </div>
      <div class="bg-white/10 p-6 rounded-xl text-center">
-      <i class="w-16 h-16 mx-auto mb-4 text-neon-accent" data-feather="trending-up">
+      <i class="w-16 h-16 mx-auto mb-4 text-primary-blue" data-feather="trending-up">
       </i>
       <h3 class="text-2xl font-bold mb-4">
        Skill Development
       </h3>
-      <ul class="text-gray-300 space-y-2">
+      <ul class="text-gray-900 space-y-2">
        <li>
         Comprehensive training
        </li>
@@ -128,12 +170,12 @@
       </ul>
      </div>
      <div class="bg-white/10 p-6 rounded-xl text-center">
-      <i class="w-16 h-16 mx-auto mb-4 text-neon-accent" data-feather="award">
+      <i class="w-16 h-16 mx-auto mb-4 text-primary-blue" data-feather="award">
       </i>
       <h3 class="text-2xl font-bold mb-4">
        Career Growth
       </h3>
-      <ul class="text-gray-300 space-y-2">
+      <ul class="text-gray-900 space-y-2">
        <li>
         Full-time employment
        </li>
@@ -148,174 +190,508 @@
     </div>
    </div>
   </section>
-  <!-- Internship Tracks -->
-  <section class="container mx-auto py-16">
-   <h2 class="text-4xl font-heading text-center mb-12 text-neon-accent">
-    Internship Tracks
-   </h2>
-   <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-    <div class="bg-white/10 p-6 rounded-xl">
-     <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-      Software Development
-     </h3>
-     <ul class="text-gray-300 space-y-2">
-      <li>
-       Front-end Development
-      </li>
-      <li>
-       Back-end Development
-      </li>
-      <li>
-       Full-Stack Development
-      </li>
-     </ul>
+ <!-- Internship Tracks -->
+<section class="bg-gradient-to-br from-primary-blue/5 to-primary-blue/10 py-16 px-4">
+    <div class="container mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-heading text-primary-blue mb-6">
+          Internship Tracks
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Explore diverse career paths and gain hands-on experience in cutting-edge technologies
+        </p>
+      </div>
+  
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Software Development Track -->
+        <div class="
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-lg 
+          transform 
+          transition-all 
+          hover:-translate-y-4 
+          hover:shadow-2xl 
+          group 
+          relative">
+          
+          <div class="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+            <svg class="w-16 h-16 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+  
+          <div class="p-8 relative z-10">
+            <h3 class="text-2xl font-bold mb-6 text-primary-blue flex items-center">
+              <span class="mr-4">
+                <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </span>
+              Software Development
+            </h3>
+            <ul class="text-gray-600 space-y-3">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                </svg>
+                Front-end Development
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                </svg>
+                Back-end Development
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                </svg>
+                Full-Stack Development
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Digital Marketing Track -->
+        <div class="
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-lg 
+          transform 
+          transition-all 
+          hover:-translate-y- 4 
+          hover:shadow-2xl 
+          group 
+          relative">
+          
+          <div class="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+            <svg class="w-16 h-16 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 4v16m8-8H4"></path>
+            </svg>
+          </div>
+  
+          <div class="p-8 relative z-10">
+            <h3 class="text-2xl font-bold mb-6 text-primary-blue flex items-center">
+              <span class="mr-4">
+                <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+              Digital Marketing
+            </h3>
+            <ul class="text-gray-600 space-y-3">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Social Media Marketing
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Content Strategy
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Performance Marketing
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- Data Science Track -->
+        <div class="
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-lg 
+          transform 
+          transition-all 
+          hover:-translate-y-4 
+          hover:shadow-2xl 
+          group 
+          relative">
+          
+          <div class="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+            <svg class="w-16 h-16 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 4v16m8-8H4"></path>
+            </svg>
+          </div>
+  
+          <div class="p-8 relative z-10">
+            <h3 class="text-2xl font-bold mb-6 text-primary-blue flex items-center">
+              <span class="mr-4">
+                <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+              Data Science
+            </h3>
+            <ul class="text-gray-600 space-y-3">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Machine Learning
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill ="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Data Analysis
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                AI Research
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- UX/UI Design Track -->
+        <div class="
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-lg 
+          transform 
+          transition-all 
+          hover:-translate-y-4 
+          hover:shadow-2xl 
+          group 
+          relative">
+          
+          <div class="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+            <svg class="w-16 h-16 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 4v16m8-8H4"></path>
+            </svg>
+          </div>
+  
+          <div class="p-8 relative z-10">
+            <h3 class="text-2xl font-bold mb-6 text-primary-blue flex items-center">
+              <span class="mr-4">
+                <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4v16m8-8H4"></path>
+                </svg>
+              </span>
+              UX/UI Design
+            </h3>
+            <ul class="text-gray-600 space-y-3">
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Interface Design
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                User Experience Research
+              </li>
+              <li class="flex items-center">
+                <svg class="w-4 h-4 mr-2 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Prototyping
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="bg-white/10 p-6 rounded-xl">
-     <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-      Digital Marketing
-     </h3>
-     <ul class="text-gray-300 space-y-2">
-      <li>
-       Social Media Marketing
-      </li>
-      <li>
-       Content Strategy
-      </li>
-      <li>
-       Performance Marketing
-      </li>
-     </ul>
-    </div>
-    <div class="bg-white/10 p-6 rounded-xl">
-     <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-      Data Science
-     </h3>
-     <ul class="text-gray-300 space-y-2">
-      <li>
-       Machine Learning
-      </li>
-      <li>
-       Data Analysis
-      </li>
-      <li>
-       AI Research
-      </li>
-     </ul>
-    </div>
-    <div class="bg-white/10 p-6 rounded-xl">
-     <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-      UX/UI Design
-     </h3>
-     <ul class="text-gray-300 space-y-2">
-      <li>
-       Interface Design
-      </li>
-      <li>
-       User Experience Research
-      </li>
-      <li>
-       Prototyping
-      </li>
-     </ul>
-    </div>
-   </div>
   </section>
   <!-- Application Process -->
   <section class="bg-primary-blue/20 py-16">
     <div class="container mx-auto">
-        <h2 class="text-4xl font-heading text-center mb-12 text-neon-accent">
+        <h2 class="text-4xl font-heading text-center mb-12 text-primary-blue">
             Application Process
         </h2>
         <div class="flex justify-center mb-8">
         </div>
-        <ol class="max-w-md mx-auto space-y-6 text-gray-700 list-decimal list-inside dark:text-gray-400">
+        <ol class="max-w-md mx-auto space-y-6 text-gray-700 list-decimal list-inside dark:text-gray-800">
             <li class="p-4  rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent">Step 1:</span> Online Application Submission
+                <span class="font-semibold text-primary-blue">Step 1:</span> Online Application Submission
             </li>
             <li class="p-4  rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent">Step 2:</span> Initial Screening
+                <span class="font-semibold text-primary-blue">Step 2:</span> Initial Screening
             </li>
             <li class="p-4  rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent">Step 3:</span> Technical Assessment
+                <span class="font-semibold text-primary-blue">Step 3:</span> Technical Assessment
             </li>
             <li class="p-4  rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent">Step 4:</span> Interview Rounds
+                <span class="font-semibold text-primary-blue">Step 4:</span> Interview Rounds
             </li>
             <li class="p-4  rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent">Step 5:</span> Final Selection
+                <span class="font-semibold text-primary-blue">Step 5:</span> Final Selection
             </li>
         </ol>
      
     </div>
 </section>
-  <!-- Application Form -->
-  <section class="container mx-auto py-16">
-   <h2 class="text-4xl font-heading text-center mb-12 text-neon-accent">
-    Apply Now
-   </h2>
-   <form class="max-w-3xl mx-auto bg-white/10 p-8 rounded-xl">
-    <div class="mb-4">
-     <label class="block text-gray-300 mb-2" for="name">
-      Full Name
-     </label>
-     <input class="w-full p-4 rounded-lg bg-white/20 text-white placeholder-gray-400" id="name" placeholder="Enter your full name" required="" type="text"/>
+ <!-- Application Form -->
+<section class="bg-gradient-to-br from-primary-blue/10 to-primary-blue/5 py-16 px-4">
+    <div class="container mx-auto">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-heading text-primary-blue mb-6">
+            Apply Now
+          </h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Join our innovative team and be part of cutting-edge technological solutions
+          </p>
+        </div>
+  
+        <form class="
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          shadow-2xl 
+          p-8 
+          md:p-12 
+          relative 
+          overflow-hidden">
+          
+          <!-- Decorative Background -->
+          <div class="absolute inset-0 bg-gradient-to-br from-primary-blue/5 to-primary-blue/10 opacity-50 -z-10"></div>
+  
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- Full Name -->
+            <div class="mb-4">
+              <label class="block text-primary-blue mb-2 font-medium" for="name">
+                Full Name
+              </label>
+              <div class="relative">
+                <input 
+                  class="
+                    w-full 
+                    p-4 
+                    rounded-lg 
+                    bg-primary-blue/5 
+                    border 
+                    border-primary-blue/10 
+                    focus:border-neon-accent 
+                    focus:ring-2 
+                    focus:ring-neon-accent/30 
+                    transition-all 
+                    duration-300
+                    text-primary-blue
+                    placeholder-primary-blue/50"
+                  id="name" 
+                  placeholder="Enter your full name" 
+                  required 
+                  type="text"
+                />
+                <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-primary-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+            </div>
+  
+            <!-- Email Address -->
+            <div class="mb-4">
+              <label class="block text-primary-blue mb-2 font-medium" for="email">
+                Email Address
+              </label>
+              <div class="relative">
+                <input 
+                  class="
+                    w-full 
+                    p-4 
+                    rounded-lg 
+                    bg-primary-blue/5 
+                    border 
+                    border-primary-blue/10 
+                    focus:border-neon-accent 
+                    focus:ring-2 
+                    focus:ring-neon-accent/30 
+                    transition-all 
+                    duration-300
+                    text-primary-blue
+                    placeholder-primary-blue/50"
+                  id="email" 
+                  placeholder="Enter your email" 
+                  required 
+                  type="email"
+                />
+                <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-primary-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Educational Background -->
+          <div class="mb-4">
+            <label class="block text-primary-blue mb-2 font-medium" for="education">
+              Educational Background
+            </label>
+            <div class="relative">
+              <input 
+                class="
+                  w-full 
+                  p-4 
+                  rounded-lg 
+                  bg-primary-blue/5 
+                  border 
+                  border-primary-blue/10 
+                  focus:border-neon-accent 
+                  focus:ring-2 
+                  focus:ring-neon-accent/30 
+                  transition-all 
+                  duration-300
+                  text-primary-blue
+                  placeholder-primary-blue/50"
+                id="education" 
+                placeholder="Your degree and institution" 
+                required 
+                type="text"
+              />
+              <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-primary-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 10l10 5 10-5" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 14l10 5 10-5" />
+              </svg>
+            </div>
+          </div>
+  
+          <!-- Technical Skills -->
+          <div class="mb-4">
+            <label class="block text-primary-blue mb-2 font-medium" for="skills">
+              Technical Skills
+            </label>
+            <textarea 
+              class="
+                w-full 
+                p-4 
+                rounded-lg 
+                bg-primary-blue/5 
+                border 
+                border-primary-blue/10 
+                focus:border-neon-accent 
+                focus:ring-2 
+                focus:ring-neon-accent/30 
+                transition-all 
+                duration-300
+                text-primary-blue
+                placeholder-primary-blue/50
+                h-32"
+              id="skills" 
+              placeholder="List your technical skills" 
+              required
+            ></textarea>
+          </div>
+  
+          <!-- Portfolio Link -->
+          <div class="mb-4">
+            <label class="block text-primary-blue mb-2 font-medium" for="portfolio">
+              Portfolio Link
+            </label>
+            <div class="relative">
+              <input 
+                class="
+                  w-full 
+                  p-4 
+                  rounded-lg 
+                  bg-primary-blue/5 
+                  border 
+                  border-primary-blue/10 
+                  focus:border-neon-accent 
+                  focus:ring-2 
+                  focus:ring-neon-accent/30 
+                  transition-all 
+                  duration-300
+                  text-primary-blue
+                  placeholder-primary-blue/50"
+                id="portfolio" 
+                placeholder="Your portfolio URL" 
+                required 
+                type="url"
+              />
+              <svg class="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-primary-blue/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke -join="round" stroke-width="1.5" d="M3 12l2-2 4 4 8-8 2 2-10 10-4-4z" />
+              </svg>
+            </div>
+          </div>
+  
+          <!-- Motivation Statement -->
+          <div class="mb-4">
+            <label class="block text-primary-blue mb-2 font-medium" for="motivation">
+              Motivation Statement
+            </label>
+            <textarea 
+              class="
+                w-full 
+                p-4 
+                rounded-lg 
+                bg-primary-blue/5 
+                border 
+                border-primary-blue/10 
+                focus:border-neon-accent 
+                focus:ring-2 
+                focus:ring-neon-accent/30 
+                transition-all 
+                duration-300
+                text-primary-blue
+                placeholder-primary-blue/50
+                h-32"
+              id="motivation" 
+              placeholder="Why do you want to join us?" 
+              required
+            ></textarea>
+          </div>
+  
+          <button class="
+            w-full 
+            bg-neon-accent 
+            text-white 
+            px-6 
+            py-3 
+            rounded-full 
+            hover:scale-105 
+            transition-transform 
+            duration-300" 
+            type="submit">
+            Submit Application
+          </button>
+        </form>
+      </div>
     </div>
-    <div class="mb-4">
-     <label class="block text-gray-300 mb-2" for="email">
-      Email Address
-     </label>
-     <input class="w-full p-4 rounded-lg bg-white/20 text-white placeholder-gray-400" id="email" placeholder="Enter your email" required="" type="email"/>
-    </div>
-    <div class="mb-4">
-     <label class="block text-gray-300 mb-2" for="education">
-      Educational Background
-     </label>
-     <input class="w-full p-4 rounded-lg bg-white/20 text-white placeholder-gray-400" id="education" placeholder="Your degree and institution" required="" type="text"/>
-    </div>
-    <div class="mb-4">
-     <label class="block text-gray-300 mb-2" for="skills">
-      Technical Skills
-     </label>
-     <textarea class="w-full p-4 rounded-lg bg-white/20 text-white placeholder-gray-400" id="skills" placeholder="List your technical skills" required=""></textarea>
-    </div>
-    <div class="mb-4">
-     <label class="block text-gray-300 mb-2" for="portfolio">
-      Portfolio Link
-     </label>
-     <input class="w-full p-4 rounded-lg bg-white/20 text-white placeholder-gray-400" id="portfolio" placeholder="Your portfolio URL" required="" type="url"/>
-    </div>
-    <div class="mb-4">
-     <label class="block text-gray-300 mb-2" for="motivation">
-      Motivation Statement
-     </label>
-     <textarea class="w-full p-4 rounded-lg bg-white/20 text-white placeholder-gray-400" id="motivation" placeholder="Why do you want to join us?" required=""></textarea>
-    </div>
-    <button class="w-full bg-neon-accent text-primary-blue px-6 py-3 rounded-full hover:scale-105 transition-transform" type="submit">
-     Submit Application
-    </button>
-   </form>
   </section>
   <!-- Selection Criteria -->
   <section class="bg-primary-blue/20 py-16">
     <div class="container mx-auto">
-        <h2 class="text-4xl font-heading text-center mb-12 text-neon-accent">
+        <h2 class="text-4xl font-heading text-center mb-12 text-primary-blue">
             What We Look For
         </h2>
-        <ul class="max-w-md mx-auto space-y-6 text-gray-700 list-disc list-inside dark:text-gray-400">
+        <ul class="max-w-md mx-auto space-y-6 text-gray-700 list-disc list-inside dark:text-gray-800">
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Technical Proficiency
+                <span class="font-semibold "></span> Technical Proficiency
             </li>
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Innovative Thinking
+                <span class="font-semibold "></span> Innovative Thinking
             </li>
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Passion for Technology
+                <span class="font-semibold "></span> Passion for Technology
             </li>
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Collaborative Spirit
+                <span class="font-semibold "></span> Collaborative Spirit
             </li>
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Learning Agility
+                <span class="font-semibold "></span> Learning Agility
             </li>
         </ul>
     </div>
@@ -323,24 +699,24 @@
   <!-- Compensation & Benefits -->
   <section class="bg-primary-blue/20 py-16">
     <div class="container mx-auto">
-        <h2 class="text-4xl font-heading text-center mb-12 text-neon-accent">
+        <h2 class="text-4xl font-heading text-center mb-12 text-primary-blue">
             Compensation &amp; Benefits
         </h2>
-        <ul class="max-w-md mx-auto space-y-6 text-gray-700 list-disc list-inside dark:text-gray-400">
+        <ul class="max-w-md mx-auto space-y-6 text-gray-700 list-disc list-inside dark:text-gray-800">
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Competitive Stipend
+                <span class="font-semibold text-primary-blue"></span> Competitive Stipend
             </li>
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Flexible Working Hours
+                <span class="font-semibold text-primary-blue"></span> Flexible Working Hours
             </li>
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Remote Work Options
+                <span class="font-semibold text-primary-blue"></span> Remote Work Options
             </li>
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Performance Bonuses
+                <span class="font-semibold text-primary-blue"></span> Performance Bonuses
             </li>
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Learning Allowance
+                <span class="font-semibold text-primary-blue"></span> Learning Allowance
             </li>
         </ul>
     </div>
@@ -348,21 +724,21 @@
 
 <section class="bg-primary-blue/20 py-16">
     <div class="container mx-auto">
-        <h2 class="text-4xl font-heading text-center mb-12 text-neon-accent">
+        <h2 class="text-4xl font-heading text-center mb-12 text-primary-blue">
             Engagement Mechanisms
         </h2>
-        <ul class="max-w-md mx-auto space-y-6 text-gray-700 list-disc list-inside dark:text-gray-400">
+        <ul class="max-w-md mx-auto space-y-6 text-gray-700 list-disc list-inside dark:text-gray-800">
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Live Chat Support
+                <span class="font-semibold text-primary-blue"></span> Live Chat Support
             </li>
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Instant Application Tracker
+                <span class="font-semibold text-primary-blue"></span> Instant Application Tracker
             </li>
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> FAQ Section
+                <span class="font-semibold text-primary-blue"></span> FAQ Section
             </li>
             <li class="p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                <span class="font-semibold text-neon-accent"></span> Virtual Information Session
+                <span class="font-semibold text-primary-blue"></span> Virtual Information Session
             </li>
         </ul>
     </div>
@@ -374,10 +750,10 @@
      © 2023 Be Light. All rights reserved.
     </p>
     <div class="flex justify-center space-x-4 mt-4">
-     <a class="text-neon-accent hover:underline" href="#">
+     <a class="text-primary-blue hover:underline" href="#">
       Privacy Policy
      </a>
-     <a class="text-neon-accent hover:underline" href="#">
+     <a class="text-primary-blue hover:underline" href="#">
       Terms of Service
      </a>
     </div>

@@ -28,39 +28,82 @@
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
  </head>
- <body class="bg-dark-navy text-white font-body">
+ <body class=" text-blue-600 font-body">
   <!-- Header Navigation -->
-  <header class="fixed w-full z-50 bg-primary-blue/30 backdrop-blur-lg">
-   <nav class="container mx-auto flex justify-between items-center p-4">
-    <div class="logo">
-     <img alt="Be Light Logo - A stylized light bulb with digital circuits" class="h-12" src="logo.png"/>
-    </div>
-    <div class="hidden md:flex space-x-6">
-        <a class="nav-link hover:text-accent-cyan transition-all" href="index.html">
-            Home
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="AboutUs.html">
-            About Us
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="internshipPprogram.html">
-            Internship
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="BlogsPage.html">
-            Blogs
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="GetQuotePage.html">
-            Get Quote
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="VacancyPage.html">
-              Vacancy
-             </a>
-    </div>
-   </nav>
+  <header class="fixed w-full z-50 bg-white/70 backdrop-blur-lg shadow-sm">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
+      <div class="flex items-center">
+        <img 
+          alt="Be Light Logo" 
+          class="h-10 md:h-12 w-auto transition-transform hover:scale-105" 
+          src="logo.png"
+        />
+      </div>
+  
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Home
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="AboutUs.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          About Us
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="internshipPprogram.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Internship
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="BlogsPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Blogs
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="GetQuotePage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Get Quote
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="VacancyPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Vacancy
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+      </div>
+  
+      <div class="hidden md:block">
+        <a 
+          href="GetQuotePage.html" 
+          class="px-4 py-2   text-black-navy rounded-full text-sm hover:bg-blue-100 transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+  
+      <!-- Mobile Menu Toggle -->
+      <div class="md:hidden">
+        <button 
+          aria-label="Mobile Menu" 
+          class="text-gray-700 hover:text-blue-600 transition-colors"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            class="h-6 w-6" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
   </header>
   <!-- Page Header -->
   <section class="relative h-[500px] flex items-center justify-center overflow-hidden">
    <img alt="Abstract digital background with blue and teal hues" class="absolute inset-0 w-full h-full object-cover" src="https://placehold.co/1920x500"/>
-   <div class="absolute inset-0 bg-primary-blue opacity-90">
+   <div class="absolute inset-0  opacity-90">
    </div>
    <div class="container mx-auto text-center relative z-10">
     <h1 class="text-5xl font-heading font-bold mb-4 text-white">
@@ -74,7 +117,7 @@
   <!-- Mission Statement -->
   <section class="container mx-auto py-16 px-4">
    <div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-4xl font-heading font-bold mb-8 text-neon-accent">
+    <h2 class="text-4xl font-heading font-bold mb-8 text-primary-blue">
      Our Mission
     </h2>
     <p class="text-xl text-gray-300 leading-relaxed">
@@ -86,162 +129,478 @@
     </p>
    </div>
   </section>
-  <!-- Company History Timeline -->
-  <section class="bg-primary-blue/20 py-16">
-   <div class="container mx-auto">
-    <h2 class="text-4xl font-heading text-center mb-12 text-neon-accent">
-     Our Journey
-    </h2>
-    <div class="relative">
-     <div class="timeline-line absolute left-1/2 w-1 bg-neon-accent h-full">
-     </div>
-     <div class="timeline-items relative">
-      <div class="timeline-item mb-12 flex items-center">
-       <div class="timeline-content bg-white/10 p-6 rounded-xl w-1/2 mr-8">
-        <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-         2020: Company Founding
-        </h3>
-        <p>
-         Established by visionary tech entrepreneurs with initial focus on startup ecosystem
-        </p>
-       </div>
-       <div class="timeline-marker w-8 h-8 bg-neon-accent rounded-full">
-       </div>
+ <!-- Company History Timeline -->
+<section class="bg-gradient-to-b from-primary-blue/10 to-primary-blue/5 py-16 overflow-hidden">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl md:text-5xl font-heading text-center mb-16 text-primary-blue animate-fade-in">
+        Our Journey
+      </h2>
+      <div class="relative max-w-6xl mx-auto">
+        <!-- Vertical Timeline Line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-neon-accent/30 to-neon-accent h-full"></div>
+        
+        <div class="timeline-items relative space-y-12">
+          <!-- Timeline Item Template -->
+          <div class="timeline-item group relative flex items-center">
+            <div class="timeline-content 
+              bg-white/5 
+              border border-primary-blue/10 
+              hover:border-neon-accent/30 
+              backdrop-blur-sm 
+              p-6 
+              rounded-xl 
+              w-full 
+              md:w-1/2 
+              transition-all 
+              duration-300 
+              ease-in-out 
+              transform 
+              hover:-translate-y-2 
+              shadow-lg 
+              hover:shadow-xl">
+              <h3 class="text-2xl font-bold mb-4 text-primary-blue">
+                2020: Company Founding
+              </h3>
+              <p class="text-gray-600">
+                Established by visionary tech entrepreneurs with initial focus on startup ecosystem
+              </p>
+            </div>
+            
+            <!-- Timeline Marker -->
+            <div class="timeline-marker 
+              absolute 
+              left-1/2 
+              transform 
+              -translate-x-1/2 
+              w-10 
+              h-10 
+              bg-neon-accent 
+              rounded-full 
+              border-4 
+              border-white 
+              shadow-md 
+              group-hover:animate-pulse">
+            </div>
+          </div>
+  
+          <!-- Alternate Positioning for Next Item -->
+          <div class="timeline-item group relative flex items-center flex-row-reverse md:flex-row">
+            <div class="timeline-content 
+              bg-white/5 
+              border border-primary-blue/10 
+              hover:border-neon-accent/30 
+              backdrop-blur-sm 
+              p-6 
+              rounded-xl 
+              w-full 
+              md:w-1/2 
+              transition-all 
+              duration-300 
+              ease-in-out 
+              transform 
+              hover:-translate-y-2 
+              shadow-lg 
+              hover:shadow-xl">
+              <h3 class="text-2xl font-bold mb-4 text-primary-blue">
+                2021: First Major Milestone
+              </h3>
+              <p class="text-gray-600">
+                Secured first major client and expanded team to 20 members
+              </p>
+            </div>
+            
+            <div class="timeline-marker 
+              absolute 
+              left-1/2 
+              transform 
+              -translate-x-1/2 
+              w-10 
+              h-10 
+              bg-neon-accent 
+              rounded-full 
+              border-4 
+              border-white 
+              shadow-md 
+              group-hover:animate-pulse">
+            </div>
+          </div>
+  
+          <!-- Add more timeline items following the same pattern -->
+        </div>
       </div>
-      <div class="timeline-item mb-12 flex items-center">
-       <div class="timeline-content bg-white/10 p-6 rounded-xl w-1/2 ml-8">
-        <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-         2021: First Major Milestone
-        </h3>
-        <p>
-         Secured first major client and expanded team to 20 members
-        </p>
-       </div>
-       <div class="timeline-marker w-8 h-8 bg-neon-accent rounded-full">
-       </div>
-      </div>
-      <div class="timeline-item mb-12 flex items-center">
-       <div class="timeline-content bg-white/10 p-6 rounded-xl w-1/2 mr-8">
-        <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-         2022: Global Expansion
-        </h3>
-        <p>
-         Opened offices in Europe and Asia, growing our global footprint
-        </p>
-       </div>
-       <div class="timeline-marker w-8 h-8 bg-neon-accent rounded-full">
-       </div>
-      </div>
-      <div class="timeline-item mb-12 flex items-center">
-       <div class="timeline-content bg-white/10 p-6 rounded-xl w-1/2 ml-8">
-        <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-         2023: Innovation Awards
-        </h3>
-        <p>
-         Received multiple awards for innovation in digital transformation
-        </p>
-       </div>
-       <div class="timeline-marker w-8 h-8 bg-neon-accent rounded-full">
-       </div>
-      </div>
-     </div>
     </div>
-   </div>
   </section>
   <!-- Team Introduction -->
-  <section class="container mx-auto py-16">
-   <h2 class="text-4xl font-heading text-center mb-12 text-neon-accent">
-    Our Leadership Team
-   </h2>
-   <div class="grid md:grid-cols-3 gap-8">
-    <div class="team-card bg-white/10 p-6 rounded-xl text-center">
-     <img alt="Maria Rodriguez - A professional woman with short hair and glasses" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" src="https://placehold.co/200x200"/>
-     <h3 class="text-2xl font-bold mb-2">
-      Maria Rodriguez
-     </h3>
-     <p class="text-accent-teal mb-2">
-      Chief Technology Architect
-     </p>
-     <p class="text-gray-300">
-      MIT Technology Innovation Fellow
-     </p>
+<section class="px-4 md:px-[50px] py-16 bg-gradient-to-b from-white to-primary-blue/5">
+    <div class="container mx-auto">
+      <h2 class="text-4xl md:text-5xl font-heading text-center mb-16 text-primary-blue animate-fade-in">
+        Our Leadership Team
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Team Member Card Template -->
+        <div class="team-card 
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-lg 
+          hover:shadow-2xl 
+          transition-all 
+          duration-300 
+          ease-in-out 
+          transform 
+          hover:-translate-y-4 
+          group">
+          
+          <!-- Profile Image Container -->
+          <div class="relative overflow-hidden">
+            <img 
+              alt="Maria Rodriguez - A professional woman with short hair and glasses" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+              src="https://placehold.co/400x400"
+            />
+            <!-- Overlay Effect -->
+            <div class="absolute inset-0 bg-primary-blue/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          
+          <!-- Team Member Details -->
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold mb-2 text-primary-blue">
+              Maria Rodriguez
+            </h3>
+            <p class="text-accent-teal font-medium mb-2">
+              Chief Technology Architect
+            </p>
+            <p class="text-gray-600 mb-4">
+              MIT Technology Innovation Fellow
+            </p>
+            
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a href="#" class="text-primary-blue hover:text-neon-accent">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.492 1.109-1.1 1.109zm8 6.891h-2v-3.134c0-1.492-.403-2.31-1.247-2.31-1.234 0-1.753.967-1.753 2.31v3.134h-2v-6h2v.765c0 0 .619-.765 1.969-.765 1.247 0 2.03.488 2.03 1.725v4.275z"/>
+                </svg>
+              </a>
+              <a href="#" class="text-primary-blue hover:text-neon-accent">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Repeat for other team members with similar structure -->
+        <div class="team-card 
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-lg 
+          hover:shadow-2xl 
+          transition-all 
+          duration-300 
+          ease-in-out 
+          transform 
+          hover:-translate-y-4 
+          group">
+          
+          <div class="relative overflow-hidden">
+            <img 
+              alt="John Doe - A professional man with a beard and suit" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+              src="https://placehold.co/400x400"
+            />
+            <div class="absolute inset-0 bg-primary-blue/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold mb-2 text-primary-blue">
+              John Doe
+            </h3>
+            <p class="text-accent-teal font-medium mb-2">
+              Chief Executive Officer
+            </p>
+            <p class="text-gray-600 mb-4">
+              Harvard Business School Alumnus
+            </p>
+            
+            <div class="flex justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a href="#" class="text-primary-blue hover:text-neon-accent">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.492 1.109-1.1 1.109zm8 6.891h-2v-3.134c0-1.492-.403-2.31-1.247-2.31-1.234 0-1.753.967-1.753 2.31v3.134h-2v-6h2v.765c0 0 .619-.765 1.969-.765 1.247 0 2.03.488 2.03 1.725v4.275z"/>
+                </svg>
+              </a>
+              <a href="#" class="text-primary-blue hover:text-neon-accent">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828 .775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="team-card 
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-lg 
+          hover:shadow-2xl 
+          transition-all 
+          duration-300 
+          ease-in-out 
+          transform 
+          hover:-translate-y-4 
+          group">
+          
+          <div class="relative overflow-hidden">
+            <img 
+              alt="Jane Smith - A professional woman with long hair and a blazer" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+              src="https://placehold.co/400x400"
+            />
+            <div class="absolute inset-0 bg-primary-blue/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+          
+          <div class="p-6 text-center">
+            <h3 class="text-2xl font-bold mb-2 text-primary-blue">
+              Jane Smith
+            </h3>
+            <p class="text-accent-teal font-medium mb-2">
+              Chief Marketing Officer
+            </p>
+            <p class="text-gray-600 mb-4">
+              Stanford Graduate School of Business
+            </p>
+            
+            <div class="flex justify-center space-x-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a href="#" class="text-primary-blue hover:text-neon-accent">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.492 1.109-1.1 1.109zm8 6.891h-2v-3.134c0-1.492-.403-2.31-1.247-2.31-1.234 0-1.753.967-1.753 2.31v3.134h-2v-6h2v.765c0 0 .619-.765 1.969-.765 1.247 0 2.03.488 2.03 1.725v4.275z"/>
+                </svg>
+              </a>
+              <a href="#" class="text-primary-blue hover:text-neon-accent">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="team-card bg-white/10 p-6 rounded-xl text-center">
-     <img alt="John Doe - A professional man with a beard and suit" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" src="https://placehold.co/200x200"/>
-     <h3 class="text-2xl font-bold mb-2">
-      John Doe
-     </h3>
-     <p class="text-accent-teal mb-2">
-      Chief Executive Officer
-     </p>
-     <p class="text-gray-300">
-      Harvard Business School Alumnus
-     </p>
-    </div>
-    <div class="team-card bg-white/10 p-6 rounded-xl text-center">
-     <img alt="Jane Smith - A professional woman with long hair and a blazer" class="rounded-full mx-auto mb-4 w-48 h-48 object-cover" src="https://placehold.co/200x200"/>
-     <h3 class="text-2xl font-bold mb-2">
-      Jane Smith
-     </h3>
-     <p class="text-accent-teal mb-2">
-      Chief Marketing Officer
-     </p>
-     <p class="text-gray-300">
-      Stanford Graduate School of Business
-     </p>
-    </div>
-   </div>
   </section>
   <!-- Core Values -->
-  <section class="bg-primary-blue/20 py-16">
-   <div class="container mx-auto">
-    <h2 class="text-4xl font-heading text-center mb-12 text-neon-accent">
-     Our Core Values
-    </h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-     <div class="value-card bg-white/10 p-6 rounded-xl text-center">
-      <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-       Innovation
-      </h3>
-      <p class="text-gray-300">
-       Pushing boundaries of digital potential
-      </p>
-     </div>
-     <div class="value-card bg-white/10 p-6 rounded-xl text-center">
-      <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-       Integrity
-      </h3>
-      <p class="text-gray-300">
-       Upholding the highest standards in all we do
-      </p>
-     </div>
-     <div class="value-card bg-white/10 p-6 rounded-xl text-center">
-      <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-       Collaboration
-      </h3>
-      <p class="text-gray-300">
-       Working together to achieve common goals
-      </p>
-     </div>
-     <div class="value-card bg-white/10 p-6 rounded-xl text-center">
-      <h3 class="text-2xl font-bold mb-4 text-neon-accent">
-       Excellence
-      </h3>
-      <p class="text-gray-300">
-       Striving for the best in every project
-      </p>
-     </div>
+<section class="bg-gradient-to-br from-primary-blue/10 to-primary-blue/20 py-16 overflow-hidden">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl md:text-5xl font-heading text-center mb-16 text-primary-blue animate-fade-in">
+        Our Core Values
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="value-card 
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-lg 
+          hover:shadow-2xl 
+          transition-all 
+          duration-300 
+          ease-in-out 
+          transform 
+          hover:-translate-y-2 
+          group 
+          relative">
+          
+          <div class="p-6 text-center">
+            <div class="mb-4 flex justify-center">
+              <div class="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-primary-blue" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.393 7.5l-5.643 5.784-2.644-2.506-1.106 1.061 3.75 3.567 6.75-6.916-1.107-1.99z"/>
+                </svg>
+              </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-4 text-primary-blue">
+              Innovation
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Pushing boundaries of digital potential
+            </p>
+            
+            <a href="#" class="
+              inline-flex 
+              items-center 
+              text-primary-blue 
+              hover:text-neon-accent 
+              transition-colors 
+              duration-300
+              text-sm
+              group/link">
+              <span>Learn More</span>
+              <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+  
+        <div class="value-card 
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-lg 
+          hover:shadow-2xl 
+          transition-all 
+          duration-300 
+          ease-in-out 
+          transform 
+          hover:-translate-y-2 
+          group 
+          relative">
+          
+          <div class="p-6 text-center">
+            <div class="mb-4 flex justify-center">
+              <div class="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-primary-blue" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1 17l-5-5.299 1.399-1.433 3.574 3.393 5.805-5.661 1.396 1.436-7.174 6.564z"/>
+                </svg>
+              </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-4 text-primary-blue">
+              Integrity
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Upholding the highest standards in all we do
+            </p>
+            
+            <a href="#" class="
+              inline-flex 
+              items-center 
+              text-primary-blue 
+              hover:text-neon-accent 
+              transition-colors 
+              duration-300
+              text-sm
+              group/link">
+              <span>Learn More</span>
+              <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+  
+        <div class="value-card 
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-lg 
+          hover:shadow-2xl 
+          transition-all 
+          duration-300 
+          ease-in-out 
+          transform 
+          hover:-translate-y-2 
+          group 
+          relative">
+          
+          <div class="p-6 text-center">
+            <div class="mb-4 flex justify-center">
+              <div class="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-primary-blue" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-6v2h6v-2zm0 3h-6v2h6v-2zm0 3h-6v2h6v-2z"/>
+                </svg>
+              </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-4 text-primary-blue">
+              Collaboration
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Working together to achieve common goals
+            </p>
+            
+            <a href="#" class="
+              inline-flex 
+              items-center 
+              text-primary-blue 
+              hover:text-neon-accent 
+              transition-colors 
+              duration-300
+              text-sm
+              group/link">
+              <span>Learn More</span>
+              <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+  
+        <div class="value-card 
+          bg-white 
+          border border-primary-blue/10 
+          rounded-2xl 
+          overflow-hidden 
+          shadow-lg 
+          hover:shadow-2xl 
+          transition-all 
+          duration-300 
+          ease-in-out 
+          transform 
+          hover -translate-y-2 
+          group 
+          relative">
+          
+          <div class="p-6 text-center">
+            <div class="mb-4 flex justify-center">
+              <div class="w-12 h-12 bg-primary-blue/10 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-primary-blue" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-4 10h8v2h-8v-2zm0 3h8v2h-8v-2zm0 3h8v2h-8v-2z"/>
+                </svg>
+              </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-4 text-primary-blue">
+              Excellence
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Striving for the best in every project
+            </p>
+            
+            <a href="#" class="
+              inline-flex 
+              items-center 
+              text-primary-blue 
+              hover:text-neon-accent 
+              transition-colors 
+              duration-300
+              text-sm
+              group/link">
+              <span>Learn More</span>
+              <svg class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-   </div>
   </section>
   <!-- Achievements -->
   <section class="container mx-auto py-16">
-   <h2 class="text-4xl font-heading text-center mb-12 text-neon-accent">
+   <h2 class="text-4xl font-heading text-center mb-12 text-primary-blue">
     Our Achievements
    </h2>
    <div class="grid md:grid-cols-3 gap-8">
     <div class="achievement-card bg-white/10 p-6 rounded-xl text-center">
-     <h3 class="text-3xl font-bold text-neon-accent mb-2">
+     <h3 class="text-3xl font-bold text-primary-blue"> 
       250+
      </h3>
      <p class="text-gray-300">
@@ -249,7 +608,7 @@
      </p>
     </div>
     <div class="achievement-card bg-white/10 p-6 rounded-xl text-center">
-     <h3 class="text-3xl font-bold text-neon-accent mb-2">
+     <h3 class="text-3xl font-bold text-primary-blue"> 
       50+
      </h3>
      <p class="text-gray-300">
@@ -257,7 +616,7 @@
      </p>
     </div>
     <div class="achievement-card bg-white/10 p-6 rounded-xl text-center">
-     <h3 class="text-3xl font-bold text-neon-accent mb-2">
+     <h3 class="text-3xl font-bold text-primary-blue"> 
       100+
      </h3>
      <p class="text-gray-300">
@@ -267,36 +626,102 @@
    </div>
   </section>
   <!-- Contact Section -->
-  <section class="bg-primary-blue py-16">
-   <div class="container mx-auto text-center">
-    <h2 class="text-4xl font-heading mb-8 text-neon-accent">
-     Let's Connect
-    </h2>
-    <p class="text-xl mb-8 text-gray-300">
-     Ready to transform your digital landscape?
-    </p>
-    <button class="bg-neon-accent text-primary-blue px-8 py-3 rounded-full text-lg font-bold hover:scale-105 transition-transform">
-     Contact Our Team
-    </button>
-   </div>
+  <section class="bg-gradient-to-br from-primary-blue to-primary-blue/90 py-16 relative overflow-hidden">
+    <!-- Subtle Background Shapes -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-neon-accent/20 to-transparent"></div>
+      <div class="absolute bottom-0 right-0 w-1/2 h-full bg-gradient-to-l from-neon-accent/20 to-transparent"></div>
+    </div>
+  
+    <div class="container mx-auto text-center relative z-10 px-4">
+      <h2 class="text-4xl md:text-5xl font-heading mb-8 text-white animate-fade-in">
+        Let's Connect
+      </h2>
+      <p class="text-xl md:text-2xl mb-10 text-white/80 max-w-3xl mx-auto">
+        Ready to transform your digital landscape and unlock new possibilities?
+      </p>
+      
+      <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-6">
+        <button class="
+          bg-neon-accent 
+          text-primary-blue 
+          px-10 py-4 
+          rounded-full 
+          text-lg 
+          font-bold 
+          hover:scale-105 
+          hover:shadow-xl 
+          transition-all 
+          duration-300 
+          ease-in-out 
+          flex 
+          items-center 
+          justify-center 
+          group">
+          <span>Contact Our Team</span>
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M13.025 1l-2.847 2.828 6.175 6.176h-16.353v3.992h16.353l-6.175 6.176 2.847 2.828 10.975-11z"/>
+          </svg>
+        </button>
+        
+        <a href="#" class="
+          text-white 
+          border-2 
+          border-white/30 
+          px-10 
+          py-4 
+          rounded-full 
+          text-lg 
+          font-medium 
+          hover:bg-white/10 
+          transition-all 
+          duration-300 
+          ease-in-out 
+          flex 
+          items-center 
+          justify-center 
+          group">
+          <span>Schedule a Consultation</span>
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 12v-6h-2v8h7v-2h-5z"/>
+          </svg>
+        </a>
+      </div>
+  
+      <!-- Social Proof -->
+      <div class="mt-12 text-white/70 text-sm">
+        <p>Trusted by innovative companies and startups worldwide</p>
+        <div class="flex justify-center items-center space-x-6 mt-4 opacity-50">
+          <svg class="w-20 h-8" fill="currentColor" viewBox="0 0 120 40">
+            <path d="M40.34 20.44c0-6.08-4.92-11-11-11s-11 4.92-11 11 4.92 11 11 11 11-4.92 11-11z"/>
+          </svg>
+          <svg class="w-20 h-8" fill="currentColor" viewBox="0 0 120 40">
+            <path d="M60.34 20.44c0-6.08-4.92-11-11-11s-11 4.92-11 11 4.92 11 11 11 11-4.92 11-11z"/>
+          </svg>
+          <svg class="w-20 h-8" fill="currentColor" viewBox="0 0 120 40">
+            <path d="M80.34 20.44c0-6.08-4.92-11-11-11s-11 4.92-11 11 4.92 11 11 11 11-4.92 11-11z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
   </section>
   <!-- Footer -->
   <footer class="bg-dark-navy py-12">
    <div class="container mx-auto text-center">
     <div class="flex justify-center space-x-6 mb-6">
-     <a class="text-gray-400 hover:text-neon-accent transition-all" href="#">
+     <a class="text-gray-400 hover:text-primary-blue"> 
       <i class="fab fa-facebook-f">
       </i>
      </a>
-     <a class="text-gray-400 hover:text-neon-accent transition-all" href="#">
+     <a class="text-gray-400 hover:text-primary-blue"> 
       <i class="fab fa-twitter">
       </i>
      </a>
-     <a class="text-gray-400 hover:text-neon-accent transition-all" href="#">
+     <a class="text-gray-400 hover:text-primary-blue"> 
       <i class="fab fa-linkedin-in">
       </i>
      </a>
-     <a class="text-gray-400 hover:text-neon-accent transition-all" href="#">
+     <a class="text-gray-400 hover:text-primary-blue"> 
       <i class="fab fa-instagram">
       </i>
      </a>

@@ -13,7 +13,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-blue': '#013580',
+                        'primary-blue': '#0A192F',
                         'accent-cyan': '#00ffff',
                         'dark-navy': '#010C2A'
                     },
@@ -41,283 +41,563 @@
         }
   </script>
  </head>
- <body class="bg-dark-navy text-white font-sans">
-  <!-- Header Navigation -->
-  <header class="fixed w-full z-50 bg-primary-blue/30 backdrop-blur-lg">
-   <nav class="container mx-auto flex justify-between items-center p-4">
-    <div class="logo animate-holographic">
-     <img alt="Be Light Logo with a light bulb and digital elements" class="h-12" src="logo.png"/>
-    </div>
-    <div class="hidden md:flex space-x-6">
-     <a class="nav-link hover:text-accent-cyan transition-all" href="Homepage.html">
-      Home
-     </a>
-     <a class="nav-link hover:text-accent-cyan transition-all" href="AboutUs.html">
-      About Us
-     </a>
-     <a class="nav-link hover:text-accent-cyan transition-all" href="internshipPprogram.html">
-      Internship
-     </a>
-     <a class="nav-link hover:text-accent-cyan transition-all" href="BlogsPage.html">
-      Blogs
-     </a>
-     <a class="nav-link hover:text-accent-cyan transition-all" href="GetQuotePage.html">
-      Get Quote
-     </a>
-     <a class="nav-link hover:text-accent-cyan transition-all" href="VacancyPage.html">
-        Vacancy
-       </a>
-    </div>
-    <div class="mobile-menu md:hidden">
-     <button class="hamburger-menu">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-       <path d="M4 6h16M4 12h16M4 18h16" strokelinecap="round" strokelinejoin="round" strokewidth="{2}">
-       </path>
-      </svg>
-     </button>
-    </div>
-   </nav>
-  </header>
+ <body class="bg-gray-100 text-gray-900 font-sans">
+    <header class="fixed w-full z-50 bg-white/70 backdrop-blur-lg shadow-sm">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
+          <div class="flex items-center">
+            <img 
+              alt="Be Light Logo" 
+              class="h-10 md:h-12 w-auto transition-transform hover:scale-105" 
+              src="logo.png"
+            />
+          </div>
+      
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="Homepage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              Home
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="AboutUs.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              About Us
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="internshipPprogram.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              Internship
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="BlogsPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              Blogs
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="GetQuotePage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              Get Quote
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="VacancyPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              Vacancy
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+          </div>
+      
+          <div class="hidden md:block">
+            <a 
+              href="GetQuotePage.html" 
+              class="px-4 py-2   text-black-navy rounded-full text-sm hover:bg-blue-100 transition-colors"
+            >
+              Contact Us
+            </a>
+          </div>
+      
+          <!-- Mobile Menu Toggle -->
+          <div class="md:hidden">
+            <button 
+              aria-label="Mobile Menu" 
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="h-6 w-6" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+      
+      <!-- Optional: Mobile Menu Drawer (Hidden by default) -->
+      <div 
+        id="mobile-menu" 
+        class="fixed inset-0 bg-white z-40 hidden transform translate-x-full transition-transform"
+      >
+        <div class="container mx-auto py-12 px-4">
+          <div class="flex flex-col space-y-6">
+            <a href="Homepage.html" class="text-2xl text-gray-800 hover:text-blue-600">Home</a>
+            <a href="AboutUs.html" class="text-2xl text-gray-800 hover:text-blue-600">About Us</a>
+            <a href="internshipPprogram.html" class="text-2xl text-gray-800 hover:text-blue-600">Internship</a>
+            <a href="BlogsPage.html" class="text-2xl text-gray-800 hover:text-blue-600">Blogs</a>
+            <a href="GetQuotePage.html" class="text-2xl text-gray-800 hover:text-blue-600">Get Quote</a>
+            <a href="VacancyPage.html" class="text-2xl text-gray-800 hover:text-blue-600">Vacancy</a>
+          </div>
+        </div>
+      </div>
   <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden">
-   <div class="absolute inset-0 bg-gradient-to-br from-dark-navy to-primary-blue opacity-80 animate-particle">
-   </div>
-   <div class="container mx-auto text-center relative z-10">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white">
-     Transforming Digital Potential into Technological Reality
-    </h1>
-    <p class="text-xl md:text-2xl mb-8 text-gray-300">
-     Innovative Solutions | Intelligent Design | Unlimited Possibilities
-    </p>
-    <div class="flex justify-center space-x-4">
-     <button class="btn-primary bg-accent-cyan text-dark-navy px-6 py-3 rounded-full hover:scale-110 transition-transform" aria-label="Explore Solutions">
-      Explore Solutions
-     </button>
-     <button class="btn-secondary border border-white px-6 py-3 rounded-full hover:bg-white hover:text-dark-navy transition-colors" aria-label="Start Your Transformation">
-      Start Your Transformation
-     </button>
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 opacity-50">
+      <div class="absolute inset-0 bg-noise opacity-20"></div>
     </div>
-   </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-extralight mb-6 text-gray-800 leading-tight">
+          Transforming Digital Potential 
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-accent-cyan">
+            into Technological Reality
+          </span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-10 text-gray-600 font-light">
+          Innovative Solutions | Intelligent Design | Unlimited Possibilities
+        </p>
+        <div class="flex justify-center space-x-6">
+          <a href="#" class="px-8 py-3 bg-gradient-to-r from-blue-900 to-accent-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 inline-block">
+            Explore Solutions
+          </a>
+          <a href="#" class="px-8 py-3 border-2 border-gray-800 text-gray-800 rounded-full hover:bg-gray-800 hover:text-white transition-all transform hover:-translate-y-1 inline-block">
+            Start Your Transformation
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Optional: Subtle Animated Background -->
+    <style>
+      .bg-noise {
+        background-image: 
+          linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px);
+        background-size: 30px 30px;
+        animation: moveBackground 20s linear infinite;
+      }
+  
+      @keyframes moveBackground {
+        0% {
+          background-position: 0 0, 0 0;
+        }
+        100% {
+          background-position: 30px 30px, 30px 30px;
+        }
+      }
+    </style>
   </section>
   <!-- Services Section -->
-  <section class="container mx-auto py-16">
-   <h2 class="text-3xl md:text-4xl text-center mb-12">
-    Our Services
-   </h2>
-   <div class="grid md:grid-cols-3 gap-8">
-    <!-- Service Card 1: Software Development -->
-    <div class="service-card bg-white/10 p-6 rounded-xl hover:scale-105 transition-transform">
-     <div class="icon mb-4 animate-float">
-      <svg class="w-16 h-16 text-accent-cyan" fill="currentColor" viewbox="0 0 24 24">
-       <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 14.93V17h-2v-2.07a6.002 6.002 0 01-4-5.66V9h2v.27a4.002 4.002 0 003 3.73V7h2v6.27a4.002 4.002 0 003-3.73V9h2v.27a6.002 6.002 0 01-4 5.66z">
-       </path>
-      </svg>
-     </div>
-     <h3 class="text-xl font-semibold mb-4">
-      Software Development
-     </h3>
-     <ul class="space-y-2 text-gray-300">
-      <li>
-       Custom Software Solutions
-      </li>
-      <li>
-       Mobile App Development
-      </li>
-      <li>
-       Enterprise Architecture
-      </li>
-     </ul>
+<section class="bg-gradient-to-br from-white to-primary-blue/5 py-16 px-4">
+    <div class="container mx-auto">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-heading text-primary-blue mb-6">
+            Our Services
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Innovative solutions designed to transform your digital ecosystem and drive meaningful growth
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Software Development Card -->
+          <div class="
+            bg-white 
+            border border-primary-blue/10 
+            rounded-2xl 
+            overflow-hidden 
+            shadow-lg 
+            transform 
+            transition-all 
+            hover:-translate-y-4 
+            hover:shadow-2xl 
+            group 
+            relative">
+            
+            <div class="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+              <svg class="w-16 h-16 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+  
+            <div class="p-8 text-center relative z-10">
+              <div class="mb-6 flex justify-center">
+                <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
+                  <svg class="h-10 w-10 text-blue-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                </div>
+              </div>
+              
+              <h3 class="text-2xl font-bold text-primary-blue mb-4">
+                Software Development
+              </h3>
+              
+              <ul class="space-y-2 text-gray-600 mb-6">
+                <li>Custom Software Solutions</li>
+                <li>Mobile App Development</li>
+                <li>Enterprise Architecture</li>
+              </ul>
+              
+              <a href="#" class="
+                inline-flex 
+                items-center 
+                px-6 
+                py-3 
+                bg-blue-50 
+                text-blue-600 
+                rounded-full 
+                hover:bg-blue-100 
+                transition-colors 
+                group/link">
+                <span>Learn More</span>
+                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+  
+          <!-- Cloud Services Card -->
+          <div class="
+            bg-white 
+            border border-primary-blue/10 
+            rounded-2xl 
+            overflow-hidden 
+            shadow-lg 
+            transform 
+            transition-all 
+            hover:-translate-y-4 
+            hover:shadow-2xl 
+            group 
+            relative">
+            
+            <div class="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+              <svg class="w-16 h-16 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+  
+            <div class="p-8 text-center relative z-10">
+              <div class="mb-6 flex justify-center">
+                <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center">
+                  <svg class="h-10 w-10 text-green-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+              </div>
+              
+              <h3 class="text-2xl font-bold text-primary-blue mb-4">
+                Cloud Services
+              </h3>
+              
+              <ul class="space-y-2 text-gray-600 mb-6">
+                <li>Cloud Migration</li>
+                <li>Cloud Management</li>
+                <li>Cloud Security</li>
+              </ul>
+              
+              <a href="#" class="
+                inline-flex 
+                items-center 
+                px-6 
+                py-3 
+                bg-green-50 
+                text-green-600 
+                rounded-full 
+                hover:bg-green-100 
+                transition-colors 
+                group/link">
+                <span>Learn More</span>
+                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+  
+          <!-- AI & Machine Learning Card -->
+          <div class="
+            bg-white 
+            border border-primary-blue/10 
+            rounded-2xl 
+            overflow-hidden 
+            shadow-lg 
+            transform 
+            transition-all 
+            hover:-translate-y-4 
+            hover:shadow-2xl 
+            group 
+            relative">
+            
+            <div class="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
+              <svg class="w-16 h-16 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+  
+            <div class="p-8 text-center relative z-10">
+              <div class="mb-6 flex justify-center">
+                <div class="w-20 h-20 bg-purple-50 rounded-full flex items-center justify-center">
+                  <svg class="h-10 w-10 text-purple-500 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+              </div>
+              
+              <h3 class="text-2xl font-bold text-primary-blue mb-4">
+                AI & Machine Learning
+              </h3>
+              
+              <ul class="space-y-2 text-gray-600 mb-6">
+                <li>Predictive Analytics</li>
+                <li>Natural Language Processing</li>
+                <li>Computer Vision</li>
+              </ul>
+              
+              <a href="#" class="
+                inline-flex 
+                items-center 
+                px-6 
+                py-3 
+                bg-purple-50 
+                text-purple-600 
+                rounded-full 
+                hover:bg-purple-100 
+                transition-colors 
+                group/link">
+                <span>Learn More</span>
+                <svg class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Service Card 2: Cloud Services -->
-    <div class="service-card bg-white/10 p-6 rounded-xl hover:scale-105 transition-transform">
-     <div class="icon mb-4 animate-float">
-      <svg class="w-16 h-16 text-accent-cyan" fill="currentColor" viewbox="0 0 24 24">
-       <path d="M19 16a4 4 0 00-3.8-4H15a5 5 0 00-9.9 1.1A4.5 4.5 0 006 20h13a3 3 0 000-6z">
-       </path>
-      </svg>
-     </div>
-     <h3 class="text-xl font-semibold mb-4">
-      Cloud Services
-     </h3>
-     <ul class="space-y-2 text-gray-300">
-      <li>
-       Cloud Migration
-      </li>
-      <li>
-       Cloud Management
-      </li>
-      <li>
-       Cloud Security
-      </li>
-     </ul>
-    </div>
-    <!-- Service Card 3: AI & Machine Learning -->
-    <div class="service-card bg-white/10 p-6 rounded-xl hover:scale-105 transition-transform">
-     <div class="icon mb-4 animate-float">
-      <svg class="w-16 h-16 text-accent-cyan" fill="currentColor" viewbox="0 0 24 24">
-       <path d="M12 2a10 10 0 00-7.07 17.07A10 10 0 1012 2zm1 14.93V17h-2v-2.07a6.002 6.002 0 01-4-5.66V9h2v.27a4.002 4.002 0 003 3.73V7h2v6.27a4.002 4.002 0 003-3.73V9h2v.27a6.002 6.002 0 01-4 5.66z">
-       </path>
-      </svg>
-     </div>
-     <h3 class="text-xl font-semibold mb-4">
-      AI &amp; Machine Learning
-     </h3>
-     <ul class="space-y-2 text-gray-300">
-      <li>
-       Predictive Analytics
-      </li>
-      <li>
-       Natural Language Processing
-      </li>
-      <li>
-       Computer Vision
-      </li>
-     </ul>
-    </div>
-   </div>
   </section>
   <!-- Testimonials Section -->
-  <section class="bg-primary-blue/20 py-16">
-   <div class="container mx-auto">
-    <h2 class="text-3xl text-center mb-12">
-     What Our Clients Say
-    </h2>
-    <div class="grid md:grid-cols-3 gap-6">
-     <!-- Testimonial Card 1 -->
-     <div class="testimonial-card bg-white/10 p-6 rounded-xl">
-      <blockquote class="mb-4 italic">
-       "Be Light transformed our digital strategy completely!"
-      </blockquote>
-      <div class="client-info">
-       <p class="font-semibold">
-        John Doe
-       </p>
-       <p class="text-sm text-gray-400">
-        CEO, TechInnovate
-       </p>
+  <section class="bg-gradient-to-br from-[#f4f7ff] to-[#e6eaf4] py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h2 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-accent-cyan mb-6">
+          Client Success Stories
+        </h2>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Hear from industry leaders who've transformed their businesses with our innovative solutions.
+        </p>
       </div>
-     </div>
-     <!-- Testimonial Card 2 -->
-     <div class="testimonial-card bg-white/10 p-6 rounded-xl">
-      <blockquote class="mb-4 italic">
-       "Their innovative solutions have driven our growth exponentially."
-      </blockquote>
-      <div class="client-info">
-       <p class="font-semibold">
-        Jane Smith
-       </p>
-       <p class="text-sm text-gray-400">
-        CTO, InnovateX
-       </p>
-      </div>
-     </div>
-     <!-- Testimonial Card 3 -->
-     <div class="testimonial-card bg-white/10 p-6 rounded-xl">
-      <blockquote class="mb-4 italic">
-       "Exceptional service and support throughout our digital transformation journey."
-      </blockquote>
-      <div class="client-info">
-       <p class="font-semibold">
-        Michael Brown
-       </p>
-       <p class="text-sm text-gray-400">
-        COO, FutureTech
-       </p>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Include Font Awesome in your HTML head -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6g0g5z5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous">
-
-<!-- Include Font Awesome in your HTML head -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6g0g5z5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous">
-
-<!-- Include Font Awesome in your HTML head -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM6g0g5z5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e" crossorigin="anonymous">
-
-<section class="bg-primary-blue/40 py-12">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-semibold text-white mb-6 p-5">Our Partners</h2>
-        <div class="grid md:grid-cols-4 gap-4">
-            <div class="partner-logo">
-                <i class="fas fa-cogs text-500 text-5xl mx-auto"></i>
+  
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial Card 1 -->
+        <div class="testimonial-card group">
+          <div class="bg-white rounded-3xl shadow-xl transition-all duration-300 
+                      hover:shadow-2xl hover:scale-105 p-8 relative overflow-hidden">
+            <div class="absolute top-0 right-0 opacity-10 group-hover:opacity-20 transition-all">
+              <svg class="w-32 h-32 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 11H4V17H10V11Z M20 11H14V17H20V11Z"/>
+              </svg>
             </div>
-            <div class="partner-logo">
-                <i class="fas fa-rocket text-500 text-5xl mx-auto"></i>
+            
+            <div class="flex items-center mb-6">
+            
+              <div>
+                <h3 class="text-xl font-bold text-blue-800">John Doe</h3>
+                <p class="text-sm text-gray-500">CEO, TechInnovate</p>
+              </div>
             </div>
-            <div class="partner-logo">
-                <i class="fas fa-globe text-500 text-5xl mx-auto"></i>
+  
+            <blockquote class="italic text-gray-700 mb-6 text-lg relative pl-4 border-l-4 border-blue-500">
+              "Be Light transformed our digital strategy completely with their cutting-edge approach."
+            </blockquote>
+  
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-purple-500 rounded-full"></span>
+              </div>
+              <a href="#" class="text-blue-600 font-semibold hover:underline">
+                Read Case Study →
+              </a>
             </div>
-            <div class="partner-logo">
-                <i class="fas fa-users text-500 text-5xl mx-auto"></i>
-            </div>
+          </div>
         </div>
+  
+        <!-- Testimonial Card 2 -->
+        <div class="testimonial-card group">
+          <div class="bg-white rounded-3xl shadow-xl transition-all duration-300 
+                      hover:shadow-2xl hover:scale-105 p-8 relative overflow-hidden">
+            <div class="absolute top-0 right-0 opacity-10 group-hover:opacity-20 transition-all">
+              <svg class="w-32 h-32 text-purple-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 11H4V17H10V11Z M20 11H14V17H20V11Z"/>
+              </svg>
+            </div>
+            
+            <div class="flex items-center mb-6">
+             
+              <div>
+                <h3 class="text-xl font-bold text-purple-800">Jane Smith</h3>
+                <p class="text-sm text-gray-500">CTO, InnovateX</p>
+              </div>
+            </div>
+  
+            <blockquote class="italic text-gray-700 mb-6 text-lg relative pl-4 border-l-4 border-purple-500">
+              "Their innovative solutions have driven our growth exponentially beyond expectations."
+            </blockquote>
+  
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-purple-500 rounded-full"></span>
+              </div>
+              <a href="#" class="text-purple-600 font-semibold hover:underline">
+                Read Case Study →
+              </a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Testimonial Card 3 -->
+        <div class="testimonial-card group">
+          <div class="bg-white rounded-3xl shadow-xl transition-all duration-300 
+                      hover:shadow-2xl hover:scale-105 p-8 relative overflow-hidden">
+            <div class="absolute top-0 right-0 opacity-10 group-hover:opacity-20 transition-all">
+              <svg class="w-32 h-32 text-indigo-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 11H4V17H10V11Z M20 11H14V17H20V11Z"/>
+              </svg>
+            </div>
+            
+            <div class="flex items-center mb-6">
+           
+              <div>
+                <h3 class="text-xl font-bold text-indigo-800">Michael Brown</h3>
+                <p class="text-sm text-gray-500">COO, FutureTech</p>
+              </div>
+            </div>
+  
+            <blockquote class="italic text-gray-700 mb-6 text-lg relative pl-4 border-l-4 border-indigo-500">
+              "Exceptional service and support throughout our entire digital transformation journey."
+            </blockquote>
+  
+            <div class="flex items-center justify-between">
+              <div class="flex space-x-2">
+                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+                <span class="w-3 h-3 bg-purple-500 rounded-full"></span>
+              </div>
+              <a href="#" class="text-indigo-600 font-semibold hover:underline">
+                Read Case Study →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
+  <!-- Partners Section -->
+<section class="bg-gradient-to-br from-blue-50 to-blue-100 py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-light text-gray-800 mb-4">
+          Our Partners
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We collaborate with innovative companies to deliver cutting-edge solutions
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- Partner 1 -->
+        <div class="flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-blue-500 hover:text-blue-600 hover:scale-110 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+  
+        <!-- Partner 2 -->
+        <div class="flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-green-500 hover:text-green-600 hover:scale-110 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+  
+        <!-- Partner 3 -->
+        <div class="flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-purple-500 hover:text-purple-600 hover:scale-110 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+  
+        <!-- Partner 4 -->
+        <div class="flex items-center justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-red-500 hover:text-red-600 hover:scale-110 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.768-.231-1.48-.634-2.026M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.768.231-1.48.634-2.026M14 10a4 4 0 11-8 0 4 4 0 018 0zm-4-2a2 2 0 100 4 2 2 0 000-4z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- Footer -->
   <footer class="bg-dark-navy py-12">
-    <div class="container mx-auto grid md:grid-cols-4 gap-2 px-12">
-        <div>
-            <h4 class="text-2xl font-semibold mb-4 text-white">
-                Be Light
-            </h4>
-            <p class="text-gray-300">
-                Transforming digital landscapes with innovative solutions.
-            </p>
-        </div>
-        <div>
-            <h4 class="text-2xl font-semibold mb-4 text-white">
-                Quick Links
-            </h4>
-            <nav class="space-y-2">
-                <a class="block text-gray-300 hover:text-accent-cyan transition duration-300" href="#">
-                    Home
-                </a>
-                <a class="block text-gray-300 hover:text-accent-cyan transition duration-300" href="#">
-                    Services
-                </a>
-                <a class="block text-gray-300 hover:text-accent-cyan transition duration-300" href="#">
-                    About
-                </a>
-                <a class="block text-gray-300 hover:text-accent-cyan transition duration-300" href="#">
-                    Blogs
-                </a>
-                <a class="block text-gray-300 hover:text-accent-cyan transition duration-300" href="#">
-                    Careers
-                </a>
-            </nav>
-        </div>
-        <div>
-            <h4 class="text-2xl font-semibold mb-4 text-white">
-                Connect
-            </h4>
-            <div class="flex space-x-4">
-                <a class="text-accent-cyan hover:text-white transition duration-300" href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a class="text-accent-cyan hover:text-white transition duration-300" href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a class="text-accent-cyan hover:text-white transition duration-300" href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="text-accent-cyan hover:text-white transition duration-300" href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
-        <div>
-            <h4 class="text-2xl font-semibold mb-4 text-white">
-                Newsletter
-            </h4>
-            <input class="w-full bg-white/10 p-3 rounded-md mb-4 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-accent-cyan" placeholder="Your email" type="email"/>
-            <button class="bg-accent-cyan text-dark-navy px-4 py-2 rounded-md transition duration-300 hover:bg-accent-cyan-dark">
-                Subscribe
-            </button>
-        </div>
+   <div class="container mx-auto grid md:grid-cols-4 gap-2 px-12">
+    <div>
+     <h4 class="text-2xl font-semibold mb-4 text-white">
+      Be Light
+     </h4>
+     <p class="text-gray-300">
+      Transforming digital landscapes with innovative solutions.
+     </p>
     </div>
-</footer>
+    <div>
+     <h4 class="text-2xl font-semibold mb-4 text-white">
+      Quick Links
+     </h4>
+     <nav class="space-y-2">
+      <a class="block text-gray-300 hover:text-accent-cyan transition duration-300" href="#">
+       Home
+      </a>
+      <a class="block text-gray-300 hover:text-accent-cyan transition duration-300" href="#">
+       Services
+      </a>
+      <a class="block text-gray-300 hover:text-accent-cyan transition duration-300" href="#">
+       About
+      </a>
+      <a class="block text-gray-300 hover:text-accent-cyan transition duration-300" href="#">
+       Blogs
+      </a>
+      <a class="block text-gray-300 hover:text-accent-cyan transition duration-300" href="#">
+       Careers
+      </a>
+     </nav>
+    </div>
+    <div>
+     <h4 class="text-2xl font-semibold mb-4 text-white">
+      Connect
+     </h4>
+     <div class="flex space-x-4">
+      <a class="text-accent-cyan hover:text-white transition duration-300" href="#">
+       <i class="fab fa-facebook-f">
+       </i>
+      </a>
+      <a class="text-accent-cyan hover:text-white transition duration-300" href="#">
+       <i class="fab fa-twitter">
+       </i>
+      </a>
+      <a class="text-accent-cyan hover:text-white transition duration-300" href="#">
+       <i class="fab fa-linkedin-in">
+       </i>
+      </a>
+      <a class="text-accent-cyan hover:text-white transition duration-300" href="#">
+       <i class="fab fa-instagram">
+       </i>
+      </a>
+     </div>
+    </div>
+    <div>
+     <h4 class="text-2xl font-semibold mb-4 text-white">
+      Newsletter
+     </h4>
+     <input class="w-full bg-white/10 p-3 rounded-md mb-4 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-accent-cyan" placeholder="Your email" type="email"/>
+     <button class="bg-accent-cyan text-dark-navy px-4 py-2 rounded-md transition duration-300 hover:bg-accent-cyan-dark">
+      Subscribe
+     </button>
+    </div>
+   </div>
+  </footer>
  </body>
 </html>
