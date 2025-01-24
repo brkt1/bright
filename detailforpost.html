@@ -17,7 +17,6 @@
                         'accent-teal': '#23B5B5',
                         'neon-accent': '#00FFD1',
                         'soft-white': '#F5F5F5',
-                        'dark-navy': '#010C2A'
                     },
                     fontFamily: {
                         'heading': ['Futura PT', 'sans-serif'],
@@ -29,104 +28,232 @@
         }
     </script>
 </head>
-<body class="bg-dark-navy text-white font-body">
+<body class="bg-dark  font-body">
     <!-- Enhanced Navigation -->
-    <header class="fixed w-full z-50 bg-primary-blue/30 backdrop-blur-lg">
-        <nav class="container mx-auto flex justify-between items-center p-4">
-            <div class="flex items-center">
-                <img alt="Be Light Logo, a stylized light bulb with rays emanating from it" class="h-12 mr-8" src="logo.png"/>
-                <div class="hidden md:flex space-x-6">
-                    <a class="nav-link hover:text-accent-cyan transition-all" href="index.html">
-                        Home
-                       </a>
-                       <a class="nav-link hover:text-accent-cyan transition-all" href="AboutUs.html">
-                        About Us
-                       </a>
-                       <a class="nav-link hover:text-accent-cyan transition-all" href="internshipPprogram.html">
-                        Internship
-                       </a>
-                       <a class="nav-link hover:text-accent-cyan transition-all" href="BlogsPage.html">
-                        Blogs
-                       </a>
-                       <a class="nav-link hover:text-accent-cyan transition-all" href="GetQuotePage.html">
-                        Get Quote
-                       </a>
-                       <a class="nav-link hover:text-accent-cyan transition-all" href="VacancyPage.html">
-                          Vacancy
-                         </a>
-                        </div>
-            </div>
-            <div class="flex items-center space-x-4">
-                <a href="apply.html" class="bg-neon-accent text-primary-blue px-4 py-2 rounded-full hover:scale-105 transition-transform" title="Apply for the Senior Software Engineer position">
-                    Apply Now
-                </a>
-                <div class="mobile-menu md:hidden">
-                    <button>
-                        <i class="w-6 h-6" data-feather="menu"></i>
-                    </button>
+    <header class="fixed w-full z-50 bg-white/70 backdrop-blur-lg shadow-sm">
+        <nav class="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
+          <div class="flex items-center">
+            <img 
+              alt="Be Light Logo" 
+              class="h-10 md:h-12 w-auto transition-transform hover:scale-105" 
+              src="logo.png"
+            />
+          </div>
+      
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="Homepage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              Home
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="AboutUs.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              About Us
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="internshipPprogram.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              Internship
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="BlogsPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              Blogs
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="GetQuotePage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              Get Quote
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+            <a href="VacancyPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+              Vacancy
+              <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </a>
+          </div>
+      
+          <div class="hidden md:block">
+            <a 
+              href="GetQuotePage.html" 
+              class="px-4 py-2   text-black-navy rounded-full text-sm hover:bg-blue-100 transition-colors"
+            >
+              Contact Us
+            </a>
+          </div>
+      
+          <!-- Mobile Menu Toggle -->
+          <div class="md:hidden">
+            <button 
+              aria-label="Mobile Menu" 
+              class="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                class="h-6 w-6" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                stroke="currentColor"
+              >
+                <path 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+      
+    <!-- Job Details Hero Section -->
+    <section class="container mx-auto pt-24 pb-12 px-4">
+        <div class="bg-white/90 p-8 rounded-3xl shadow-2xl backdrop-blur-sm">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div>
+                    <h1 class="text-4xl font-bold text-neon-accent mb-2">Senior Software Engineer</h1>
+                    <span class="bg-neon-accent/20 text-neon-accent px-4 py-1 rounded-full text-sm">
+                        Technology Department
+                    </span>
+                </div>
+                <div class="mt-4 md:mt-0 flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    <span class="text-gray-700 font-medium">Job ID: SE-2023-001</span>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!-- Job Details Hero Section -->
-    <section class="container mx-auto pt-24 pb-12">
-        <div class="bg-white/10 p-8 rounded-xl">
-            <div class="flex justify-between items-center mb-8">
-                <h1 class="text-4xl font-bold text-neon-accent">Senior Software Engineer</h1>
-                <span class="bg-accent-teal text-white px-4 py-2 rounded-full">Technology Department</span>
-            </div>
+    
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Job Overview -->
                 <div class="col-span-2">
                     <div class="mb-8">
-                        <h2 class="text-2xl font-bold mb-4 text-accent-teal">Job Overview</h2>
-                        <p class="text-gray-300 leading-relaxed">
+                        <h2 class="text-2xl font-bold mb-4 text-accent-teal border-b-2 border-neon-accent/30 pb-2">
+                            Job Overview
+                        </h2>
+                        <p class="text-gray-700 leading-relaxed bg-white/50 p-4 rounded-lg">
                             As a Senior Software Engineer, you will be responsible for designing complex software solutions, leading technical implementations, and mentoring junior developers. This role requires a strong background in full-stack development and cloud architecture.
                         </p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold mb-4 text-accent-teal">Key Responsibilities:</h3>
-                        <ul class="list-disc list-inside text-gray-300 space-y-2">
-                            <li>Design and architect scalable software solutions</li>
-                            <li>Lead technical implementation of complex projects</li>
-                            <li>Mentor and guide junior developers</li>
-                            <li>Collaborate with cross-functional teams</li>
-                            <li>Ensure code quality and best practices</li>
+                        <h3 class="text-xl font-bold mb-4 text-accent-teal border-b-2 border-neon-accent/30 pb-2">
+                            Key Responsibilities:
+                        </h3>
+                        <ul class="space-y-3 bg-white/50 p-4 rounded-lg">
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-neon-accent" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                Design and architect scalable software solutions
+                            </li>
+                            <li class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-neon-accent" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                Lead technical implementation of complex projects
+                            </li>
+                            <!-- Add more responsibilities with similar styling -->
                         </ul>
                     </div>
                 </div>
+    
                 <!-- Job Details Sidebar -->
-                <div class="bg-white/10 p-6 rounded-xl">
-                    <h3 class="text-xl font-bold mb-4 text-accent-teal">Job Snapshot</h3>
-                    <div class="space-y-4 text-gray-300">
-                        <div><strong>Location:</strong> <span>Hybrid (Remote/Office)</span></div>
-                        <div><strong>Salary Range:</strong> <span>$120,000 - $150,000</span></div>
-                        <div><strong>Experience:</strong> <span>5+ Years</span></div>
-                        <div><strong>Employment Type:</strong> <span>Full-Time</span></div>
-                        <div><strong>Department:</strong> <span>Technology</span></div>
+                <div class="bg-white/50 p-6 rounded-xl shadow-md">
+                    <h3 class="text-xl font-bold mb-4 text-accent-teal border-b-2 border-neon-accent/30 pb-2">
+                        Job Snapshot
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between">
+                            <strong class="text-gray-700">Location:</strong> 
+                            <span class="text-gray-600">Hybrid (Remote/Office)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <strong class="text-gray-700">Salary Range:</strong> 
+                            <span class="text-neon-accent font-bold">$120,000 - $150,000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <strong class="text-gray-700">Experience:</strong> 
+                            <span class="text-gray-600">5+ Years</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <strong class="text-gray-700">Employment Type:</strong> 
+                            <span class="text-gray-600">Full-Time</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <strong class="text-gray-700">Department:</strong> 
+                            <span class="text-gray-600">Technology</span>
+                        </div>
                     </div>
                 </div>
             </div>
+    
             <div class="mt-8">
-                <h3 class="text-xl font-bold mb-4 text-accent-teal">Required Skills:</h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <ul class="list-disc list-inside text-gray-300">
-                        <li>Expert-level Full-Stack Development</li>
-                        <li>Cloud Architecture Experience</li>
-                        <li>Microservices Design</li>
-                        <li>CI/CD Pipelines</li>
+                <h3 class="text-xl font-bold mb-4 text-accent-teal border-b-2 border-neon-accent/30 pb-2">
+                    Required Skills:
+                </h3>
+                <div class="grid md:grid-cols-2 gap-4 bg-white/50 p-6 rounded-lg">
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-neon-accent" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                            </svg>
+                            Expert-level Full-Stack Development
+                         </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-neon-accent" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                            </svg>
+                            Cloud Architecture Experience
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-neon-accent" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                            </svg>
+                            Microservices Design
+                        </li>
                     </ul>
-                    <ul class="list-disc list-inside text-gray-300">
-                        <li>Advanced JavaScript/TypeScript</li>
-                        <li>React/Node.js Expertise</li>
-                        <li>AWS/Azure Cloud Platforms</li>
-                        <li>Strong System Design Skills</li>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-neon-accent" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                            </svg>
+                            CI/CD Pipelines
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-neon-accent" viewBox="0 0 20  20" fill="currentColor">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                            </svg>
+                            Advanced JavaScript/TypeScript
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-neon-accent" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                            </svg>
+                            React/Node.js Expertise
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-neon-accent" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                            </svg>
+                            AWS/Azure Cloud Platforms
+                        </li>
+                        <li class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-neon-accent" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                                <path fill-rule="evenodd" d="M4 5a2 2 0 ```html
+    2-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+                            </svg>
+                            Strong System Design Skills
+                        </li>
                     </ul>
                 </div>
             </div>
+    
             <div class="mt-8 bg-primary-blue/20 p-6 rounded-xl">
                 <h3 class="text-xl font-bold mb-4 text-accent-teal">Application Process:</h3>
-                <ol class="list-decimal list-inside text-gray-300 space-y-2">
+                <ol class="list-decimal list-inside text-gray-900 space-y-2">
                     <li>Online Application Submission</li>
                     <li>Initial Resume Screening</li>
                     <li>Technical Assessment</li>
@@ -135,14 +262,15 @@
                     <li>Final Selection</li>
                 </ol>
             </div>
+    
             <div class="mt-8 flex space-x-4">
                 <a class="bg-neon-accent text-primary-blue px-6 py-2 rounded-full hover:scale-105 transition-transform" href="/apply.html">Apply Now</a>
-                <a class="bg-accent-teal text-white px-6 py-2 rounded-full hover:scale-105 transition-transform" href="/careers.html">Back to Careers</a>
+                <a class="bg-accent-teal px-6 py-2 rounded-full hover:scale-105 transition-transform" href="/careers.html">Back to Careers</a>
             </div>
         </div>
     </section>
     <!-- Footer -->
-    <footer class="bg-dark-navy py-12">
+    <footer class="bg-dark py-12">
         <div class="container mx-auto text-center">
             <p class="text-gray-400">© 2023 Be Light. All rights reserved.</p>
             <div class="flex justify-center space-x-4 mt-4">

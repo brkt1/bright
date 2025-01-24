@@ -16,7 +16,6 @@
                         'accent-teal': '#23B5B5',
                         'neon-accent': '#00FFD1',
                         'soft-white': '#F5F5F5',
-                        'dark-navy': '#010C2A'
                     },
                     fontFamily: {
                         'heading': ['Futura PT', 'sans-serif'],
@@ -32,94 +31,103 @@
     class="bg-dark-navy text-white font-body"
 >
     <!-- Application Form Container -->
-    <div class="min-h-screen flex items-center justify-center p-6">
+    <div class="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-primary-blue to-primary-blue/80">
         <div class="w-full max-w-4xl">
-            <div class="bg-white/10 rounded-2xl shadow-2xl overflow-hidden">
+            <div class="bg-white/90 rounded-3xl shadow-2xl overflow-hidden backdrop-blur-sm">
                 <!-- Form Header -->
-                <div class="bg-primary-blue/50 px-8 py-6 border-b border-white/10">
-                    <h2 class="text-3xl font-bold text-neon-accent">
-                        Job Application
-                    </h2>
-                    <p class="text-gray-300 mt-2">
-                        Senior Software Engineer - Technology Department
-                    </p>
+                <div class="bg-gradient-to-r from-neon-accent/20 to-accent-teal/20 px-8 py-6 border-b border-white/10">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h2 class="text-3xl font-bold text-black">
+                                Job Application
+                            </h2>
+                            <p class="text-gray-700 mt-2 font-medium">
+                                Senior Software Engineer - Technology Department
+                            </p>
+                        </div>
+                        <div class="bg-neon-accent/10 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-neon-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
-
+    
                 <!-- Application Form -->
                 <form @submit.prevent="submitApplication" class="p-8">
-                    <div class="grid md:grid-cols-2 gap-6">
+                    <div class="grid md:grid-cols-2 gap-8">
                         <!-- Personal Information -->
                         <div class="space-y-6">
-                            <h3 class="text-xl font-bold text-accent-teal border-b pb-2">
+                            <h3 class="text-xl font-bold text-accent-teal border-b-2 border-neon-accent/30 pb-3">
                                 Personal Information
                             </h3>
                             
                             <div class="grid grid-cols-2 gap-4">
                                 <div>
-                                    <label class="block text-sm text-gray-300 mb-2">First Name</label>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">First Name</label>
                                     <input 
                                         type="text" 
                                         x-model="application.firstName"
-                                        class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                                        class="w-full bg-white/80 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition"
                                         placeholder="John"
                                         required
                                     >
                                 </div>
                                 <div>
-                                    <label class="block text-sm text-gray-300 mb-2">Last Name</label>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
                                     <input 
                                         type="text" 
                                         x-model="application.lastName"
-                                        class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                                        class="w-full bg-white/80 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition"
                                         placeholder="Doe"
                                         required
                                     >
                                 </div>
                             </div>
-
+    
                             <div>
-                                <label class="block text-sm text-gray-300 mb-2">Email Address</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
                                 <input 
                                     type="email" 
                                     x-model="application.email"
-                                    class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                                    class="w-full bg-white/80 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition"
                                     placeholder="john.doe@example.com"
                                     required
                                 >
                             </div>
-
+    
                             <div>
-                                <label class="block text-sm text-gray-300 mb-2">Phone Number</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
                                 <input 
                                     type="tel" 
                                     x-model="application.phone"
-                                    class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                                    class="w-full bg-white/80 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition"
                                     placeholder="+1 (123) 456-7890"
                                     required
                                 >
                             </div>
                         </div>
-
+    
                         <!-- Professional Information -->
                         <div class="space-y-6">
-                            <h3 class="text-xl font-bold text-accent-teal border-b pb-2">
+                            <h3 class="text-xl font-bold text-accent-teal border-b-2 border-neon-accent/30 pb-3">
                                 Professional Details
                             </h3>
                             
                             <div>
-                                <label class="block text-sm text-gray-300 mb-2">Current Job Title</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Current Job Title</label>
                                 <input 
                                     type="text" 
                                     x-model="application.currentJobTitle"
-                                    class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                                    class="w-full bg-white/80 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition"
                                     placeholder="Software Engineer"
                                 >
                             </div>
-
+    
                             <div>
-                                <label class="block text-sm text-gray-300 mb-2">Upload Resume</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Upload Resume</label>
                                 <div 
-                                    class="w-full bg-white/10 p-4 rounded-lg border-2 border-dashed border-accent-teal/50 text-center"
+                                    class="w-full bg-white/80 p-4 rounded-lg border-2 border-dashed border-neon-accent/50 text-center transition hover:border-neon-accent"
                                     x-data="{ fileName: '' }"
                                 >
                                     <input 
@@ -131,37 +139,39 @@
                                     >
                                     <label 
                                         for="resume-upload" 
-                                        class="cursor-pointer text-gray-300 hover:text-neon-accent"
+                                        class="cursor-pointer text-gray-700 hover:text-neon-accent flex items-center justify-center"
                                     >
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
                                         <span x-text="fileName || 'Click to upload resume'"></span>
                                     </label>
                                 </div>
                             </div>
-
+    
                             <div>
-                                <label class="block text-sm text-gray-300 mb-2">LinkedIn Profile</label>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">LinkedIn Profile</label>
                                 <input 
                                     type="url" 
                                     x-model="application.linkedinProfile"
-                                    class="w-full bg-white/10 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent"
-                                    placeholder="https://linkedin.com/in/yourprofile"
-                                >
+                                    class="w-full bg-white/80 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition"
+                                    placeholder="https://linkedin.com/in/yourprofile" >
                             </div>
                         </div>
                     </div>
-
+    
                     <!-- Additional Information -->
                     <div class="mt-8">
-                        <h3 class="text-xl font-bold text-accent-teal border-b pb-2">
+                        <h3 class="text-xl font-bold text-accent-teal border-b-2 border-neon-accent/30 pb-3">
                             Additional Information
                         </h3>
                         <textarea 
                             x-model="application.additionalInfo"
-                            class="w-full mt-4 bg-white/10 p-4 rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-neon-accent"
+                            class="w-full mt-4 bg-white/80 p-4 rounded-lg h-32 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition"
                             placeholder="Tell us why you're interested in this position and what makes you a great fit..."
                         ></textarea>
                     </div>
-
+    
                     <!-- Submit Button -->
                     <div class="mt-8 flex justify-between items-center">
                         <div class="flex items-center">
@@ -171,11 +181,11 @@
                                 class="mr-2 bg-white/10 text-neon-accent focus:ring-neon-accent"
                                 required
                             >
-                            <label class="text-sm text-gray-300">I accept the terms and conditions</label>
+                            <label class="text-sm text-gray-700">I accept the terms and conditions</label>
                         </div>
                         <button 
                             type="submit" 
-                            class="bg-neon-accent text-primary-blue px-6 py-2 rounded-full hover:scale-105 transition-transform"
+                            class="bg-neon-accent text-primary-blue px-6 py-2 rounded-full hover:scale-105 transition-transform shadow-md hover:shadow-lg"
                         >
                             Submit Application
                         </button>

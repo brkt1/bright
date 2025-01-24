@@ -21,7 +21,6 @@
                         'accent-teal': '#23B5B5',
                         'neon-accent': '#00FFD1',
                         'soft-white': '#F5F5F5',
-                        'dark-navy': '#010C2A'
                     },
                     fontFamily: {
                         'heading': ['Futura PT', 'sans-serif'],
@@ -33,52 +32,84 @@
         }
   </script>
  </head>
- <body class="bg-dark-navy text-white font-body" x-data="jobListingSystem()">
+ <body class="bg-dark-navy  font-body" x-data="jobListingSystem()">
   <!-- Enhanced Navigation -->
-  <header class="fixed w-full z-50 bg-primary-blue/30 backdrop-blur-lg">
-   <nav class="container mx-auto flex justify-between items-center p-4">
-    <div class="flex items-center">
-     <img alt="Be Light Logo, a stylized light bulb with rays emanating from it" class="h-12 mr-8" src="logo.png"/>
-     <div class="hidden md:flex space-x-6">
-        <a class="nav-link hover:text-accent-cyan transition-all" href="index.html">
-            Home
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="AboutUs.html">
-            About Us
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="internshipPprogram.html">
-            Internship
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="BlogsPage.html">
-            Blogs
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="GetQuotePage.html">
-            Get Quote
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="VacancyPage.html">
-              Vacancy
-             </a>
-     </div>
-    </div>
-    <div class="flex items-center space-x-4">
-     <button class="bg-neon-accent text-primary-blue px-4 py-2 rounded-full hover:scale-105 transition-transform">
-      Apply Now
-     </button>
-     <div class="mobile-menu md:hidden">
-      <button @click="mobileMenuOpen = !mobileMenuOpen">
-       <i class="w-6 h-6" data-feather="menu">
-       </i>
-      </button>
-     </div>
-    </div>
-   </nav>
+  <header class="fixed w-full z-50 bg-white/70 backdrop-blur-lg shadow-sm">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
+      <div class="flex items-center">
+        <img 
+          alt="Be Light Logo" 
+          class="h-10 md:h-12 w-auto transition-transform hover:scale-105" 
+          src="logo.png"
+        />
+      </div>
+  
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Home
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="AboutUs.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          About Us
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="internshipPprogram.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Internship
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="BlogsPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Blogs
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="GetQuotePage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Get Quote
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="VacancyPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Vacancy
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+      </div>
+  
+      <div class="hidden md:block">
+        <a 
+          href="GetQuotePage.html" 
+          class="px-4 py-2   text-black-navy rounded-full text-sm hover:bg-blue-100 transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+  
+      <!-- Mobile Menu Toggle -->
+      <div class="md:hidden">
+        <button 
+          aria-label="Mobile Menu" 
+          class="text-gray-700 hover:text-blue-600 transition-colors"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            class="h-6 w-6" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
   </header>
   <!-- Page Hero Section -->
   <section class="relative h-[400px] flex items-center justify-center overflow-hidden pt-20">
    <div class="absolute inset-0 bg-gradient-to-br from-primary-blue to-dark-navy opacity-90">
    </div>
    <div class="container mx-auto text-center relative z-10">
-    <h1 class="text-5xl md:text-6xl font-heading font-bold mb-6 text-white">
+    <h1 class="text-5xl md:text-6xl font-heading font-bold mb-6 ">
      Job Openings
     </h1>
     <p class="text-2xl md:text-3xl mb-8 text-neon-accent">
@@ -88,117 +119,69 @@
   </section>
   <!-- Job Listings Section -->
   <section class="container mx-auto py-16">
-   <div class="mb-12 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-    <h2 class="text-4xl font-heading text-neon-accent">
-     Current Openings
-    </h2>
-    <!-- Filtering and Sorting Controls -->
-    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
-     <!-- Department Filter -->
-     <select class="bg-white/10 text-white p-2 rounded" x-model="selectedDepartment">
-      <option value="">
-       All Departments
-      </option>
-      <option value="Technology">
-       Technology
-      </option>
-      <option value="Marketing">
-       Marketing
-      </option>
-      <option value="Design">
-       Design
-      </option>
-      <option value="Analytics">
-       Analytics
-      </option>
-     </select>
-     <!-- Location Filter -->
-     <select class="bg-white/10 text-white p-2 rounded" x-model="selectedLocation">
-      <option value="">
-       All Locations
-      </option>
-      <option value="Remote">
-       Remote
-      </option>
-      <option value="Hybrid">
-       Hybrid
-      </option>
-      <option value="On-site">
-       On-site
-      </option>
-     </select>
-     <!-- Salary Sorting -->
-     <select class="bg-white/10 text-white p-2 rounded" x-model="salarySort">
-      <option value="">
-       Sort by Salary
-      </option>
-      <option value="asc">
-       Low to High
-      </option>
-      <option value="desc">
-       High to Low
-      </option>
-     </select>
+    <div class="mb-12 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+      <h2 class="text-4xl font-heading text-neon-accent">Current Openings</h2>
+      <!-- Filtering and Sorting Controls -->
+      <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+        <!-- Department Filter -->
+        <select class="bg-white/80 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" x-model="selectedDepartment">
+          <option value="">All Departments</option>
+          <option value="Technology">Technology</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Design">Design</option>
+          <option value="Analytics">Analytics</option>
+        </select>
+        <!-- Location Filter -->
+        <select class="bg-white/80 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" x-model="selectedLocation">
+          <option value="">All Locations</option>
+          <option value="Remote">Remote</option>
+          <option value="Hybrid">Hybrid</option>
+          <option value="On-site">On-site</option>
+        </select>
+        <!-- Salary Sorting -->
+        <select class="bg-white/80 p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" x-model="salarySort">
+          <option value="">Sort by Salary</option>
+          <option value="asc">Low to High</option>
+          <option value="desc">High to Low</option>
+        </select>
+      </div>
     </div>
-   </div>
-   <!-- Job Listing Grid -->
-   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <template x-for="job in filteredAndSortedJobs">
-     <div class="bg-white/10 p-6 rounded-xl transform transition-all hover:scale-105 hover:shadow-lg">
-      <div class="flex justify-between items-center mb-4">
-       <h3 class="text-2xl font-bold text-accent-teal" x-text="job.title">
-       </h3>
-       <span class="bg-neon-accent/20 text-neon-accent px-3 py-1 rounded-full text-sm">
-        <span x-text="job.department">
-        </span>
-       </span>
-      </div>
-      <div class="text-gray-300">
-       <div class="flex justify-between mb-4">
-        <p>
-         <strong>
-          Location:
-         </strong>
-         <span x-text="job.location">
-         </span>
-        </p>
-        <p>
-         <strong>
-          Salary:
-         </strong>
-         <span x-text="job.salaryRange">
-         </span>
-        </p>
-       </div>
-       <div class="mt-4">
-        <h4 class="font-bold mb-2">
-         Key Responsibilities:
-        </h4>
-        <ul class="list-disc list-inside space-y-1">
-         <template x-for="responsibility in job.responsibilities">
-          <li class="text-sm" x-text="responsibility">
-          </li>
-         </template>
-        </ul>
-       </div>
-       <div class="mt-4">
-        <h4 class="font-bold mb-2">
-         Required Skills:
-        </h4>
-        <ul class="list-disc list-inside space-y-1">
-         <template x-for="skill in job.requiredSkills">
-          <li class="text-sm" x-text="skill">
-          </li>
-         </template>
-        </ul>
-       </div>
-       <a href="detailforpost.html" class="mt-6 inline-block bg-neon-accent text-primary-blue px-6 py-2 rounded-full hover:scale-105 transition-transform">
-        View Details
-       </a>
-      </div>
-     </div>
-    </template>
-   </div>
+    <!-- Job Listing Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <template x-for="job in filteredAndSortedJobs">
+        <div class="bg-gray-100 p-6 rounded-xl shadow-lg transform transition-all hover:scale-105 hover:shadow-2xl">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-2xl font-bold text-accent-teal" x-text="job.title"></h3>
+            <span class="bg-neon-accent/20 text-neon-accent px-3 py-1 rounded-full text-sm" x-text="job.department"></span>
+          </div>
+          <div class="text-gray-700">
+            <div class="flex justify-between mb-4">
+              <p><strong>Location:</strong> <span x-text="job.location"></span></p>
+              <p><strong>Salary:</strong> <span x-text="job.salaryRange"></span></p>
+            </div>
+            <div class="mt-4">
+              <h4 class="font-bold mb-2">Key Responsibilities:</h4>
+              <ul class="list-disc list-inside space-y-1">
+                <template x-for="responsibility in job.responsibilities">
+                  <li class="text-sm" x-text="responsibility"></li>
+                </template>
+              </ul>
+            </div>
+            <div class="mt-4">
+              <h4 class="font-bold mb-2">Required Skills:</h4>
+              <ul class="list-disc list-inside space-y-1">
+                <template x-for="skill in job.requiredSkills">
+                  <li class="text-sm" x-text="skill"></li>
+                </template>
+              </ul>
+            </div>
+            <a href="detailforpost.html" class="mt-6 inline-block bg-neon-accent text-primary-blue px-6 py-2 rounded-full hover:scale-105 transition-transform shadow-md hover:shadow-lg">
+              View Details
+            </a>
+          </div>
+        </div>
+      </template>
+    </div>
   </section>
   <script>
    function jobListingSystem() {

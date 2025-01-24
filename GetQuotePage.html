@@ -20,7 +20,6 @@
                         'accent-teal': '#23B5B5',
                         'neon-accent': '#00FFD1',
                         'soft-white': '#F5F5F5',
-                        'dark-navy': '#010C2A'
                     },
                     fontFamily: {
                         'heading': ['Futura PT', 'sans-serif'],
@@ -34,37 +33,75 @@
  </head>
  <body class="bg-dark-navy text-white font-body" x-data="quoteRequestSystem()">
   <!-- Enhanced Navigation -->
-  <header class="fixed w-full z-50 bg-primary-blue/30 backdrop-blur-lg">
-   <nav class="container mx-auto flex justify-between items-center p-4">
-    <div class="flex items-center">
-     <img alt="Be Light Logo with a stylized light bulb and company name" class="h-12 mr-8" src="logo.png"/>
-     <div class="hidden md:flex space-x-6">
-        <a class="nav-link hover:text-accent-cyan transition-all" href="index.html">
-            Home
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="AboutUs.html">
-            About Us
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="internshipPprogram.html">
-            Internship
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="BlogsPage.html">
-            Blogs
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="GetQuotePage.html">
-            Get Quote
-           </a>
-           <a class="nav-link hover:text-accent-cyan transition-all" href="VacancyPage.html">
-              Vacancy
-             </a>
-     </div>
-    </div>
-    <div class="flex items-center space-x-4">
-     <button class="bg-neon-accent text-primary-blue px-4 py-2 rounded-full hover:scale-105 transition-transform">
-      Contact Us
-     </button>
-    </div>
-   </nav>
+  <header class="fixed w-full z-50 bg-white/70 backdrop-blur-lg shadow-sm">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
+      <div class="flex items-center">
+        <img 
+          alt="Be Light Logo" 
+          class="h-10 md:h-12 w-auto transition-transform hover:scale-105" 
+          src="logo.png"
+        />
+      </div>
+  
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Home
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="AboutUs.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          About Us
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="internshipPprogram.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Internship
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="BlogsPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Blogs
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="GetQuotePage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Get Quote
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+        <a href="VacancyPage.html" class="text-gray-700 font-medium hover:text-blue-600 transition-colors group">
+          Vacancy
+          <span class="block h-0.5 bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+        </a>
+      </div>
+  
+      <div class="hidden md:block">
+        <a 
+          href="GetQuotePage.html" 
+          class="px-4 py-2   text-black-navy rounded-full text-sm hover:bg-blue-100 transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+  
+      <!-- Mobile Menu Toggle -->
+      <div class="md:hidden">
+        <button 
+          aria-label="Mobile Menu" 
+          class="text-gray-700 hover:text-blue-600 transition-colors"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            class="h-6 w-6" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              stroke-width="2" 
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
   </header>
   <!-- Page Hero Section -->
   <section class="relative h-[500px] flex items-center justify-center overflow-hidden pt-20">
@@ -82,7 +119,7 @@
   <!-- Introduction Section -->
   <section class="container mx-auto py-16 px-4">
    <div class="max-w-3xl mx-auto text-center">
-    <p class="text-xl text-gray-300 leading-relaxed">
+    <p class="text-xl text-gray-900 leading-relaxed">
      Transform your business challenges into innovative solutions. 
                 Our quote process is more than a form—it's the first step 
                 in your digital transformation journey. We provide personalized, 
@@ -93,131 +130,79 @@
   </section>
   <!-- Quote Request Form -->
   <section class="container mx-auto py-16">
-   <div class="bg-white/10 rounded-2xl p-8 md:p-12">
-    <form @submit.prevent="submitQuoteRequest">
-     <div class="grid md:grid-cols-2 gap-8">
-      <!-- Personal Information -->
-      <div>
-       <h3 class="text-2xl font-bold mb-6 text-neon-accent">
-        Personal Information
-       </h3>
-       <div class="space-y-4">
-        <input class="w-full bg-white/20 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent" placeholder="Full Name" required="" type="text" x-model="quoteRequest.fullName"/>
-        <input class="w-full bg-white/20 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent" placeholder="Company Name" type="text" x-model="quoteRequest.companyName"/>
-        <input class="w-full bg-white/20 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent" placeholder="Email Address" required="" type="email" x-model="quoteRequest.email"/>
-        <input class="w-full bg-white/20 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent" placeholder="Phone Number" required="" type="tel" x-model="quoteRequest.phone"/>
-       </div>
-      </div>
-      <!-- Project Details -->
-      <div>
-       <h3 class="text-2xl font-bold mb-6 text-neon-accent">
-        Project Details
-       </h3>
-       <div class="space-y-4">
-        <select class="w-full bg-white/20 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent" required="" x-model="quoteRequest.serviceCategory">
-         <option value="">
-          Select Service Category
-         </option>
-         <option value="software-development">
-          Software Development
-         </option>
-         <option value="digital-marketing">
-          Digital Marketing
-         </option>
-         <option value="ecommerce">
-          E-Commerce Solutions
-         </option>
-         <option value="data-analytics">
-          Data &amp; Analytics
-         </option>
-         <option value="other">
-          Other
-         </option>
-        </select>
-        <select class="w-full bg-white/20 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent" required="" x-model="quoteRequest.projectType">
-         <option value="">
-          Select Project Type
-         </option>
-         <option value="new-project">
-          New Project
-         </option>
-         <option value="project-enhancement">
-          Existing Project Enhancement
-         </option>
-         <option value="consultation">
-          Consultation
-         </option>
-         <option value="ongoing-support">
-          Ongoing Support
-         </option>
-        </select>
-        <textarea class="w-full bg-white/20 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent" placeholder="Detailed Project Description" required="" rows="4" x-model="quoteRequest.projectDescription"></textarea>
-        <div class="space-y-4">
-         <label class="block">
-          <span class="text-gray-300">
-           Estimated Budget Range
-          </span>
-          <select class="w-full bg-white/20 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent" required="" x-model="quoteRequest.budgetRange">
-           <option value="">
-            Select Budget Range
-           </option>
-           <option value="0-5000">
-            $0 - $5,000
-           </option>
-           <option value="5001-20000">
-            $5,001 - $20,000
-           </option>
-           <option value="20001-50000">
-            $20,001 - $50,000
-           </option>
-           <option value="50001-100000">
-            $50,001 - $100,000
-           </option>
-           <option value="100000+">
-            $100,000+
-           </option>
-          </select>
-         </label>
-         <label class="block">
-          <span class="text-gray-300">
-           Project Timeline
-          </span>
-          <select class="w-full bg-white/20 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-accent" required="" x-model="quoteRequest.projectTimeline">
-           <option value="">
-            Select Timeline
-           </option>
-           <option value="urgent">
-            Urgent (1-2 weeks)
-           </option>
-           <option value="short-term">
-            Short-term (1-3 months)
-           </option>
-           <option value="medium-term">
-            Medium-term (3-6 months)
-           </option>
-           <option value="long-term">
-            Long-term (6+ months)
-           </option>
-          </select>
-         </label>
+    <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+      <form @submit.prevent="submitQuoteRequest">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Personal Information -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-neon-accent">Personal Information</h3>
+            <div class="space-y-4">
+              <input class="w-full bg-white/80 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" placeholder="Full Name" required type="text" x-model="quoteRequest.fullName"/>
+              <input class="w-full bg-white/80 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" placeholder="Company Name" type="text" x-model="quoteRequest.companyName"/>
+              <input class="w-full bg-white/80 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" placeholder="Email Address" required type="email" x-model="quoteRequest.email"/>
+              <input class="w-full bg-white/80 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" placeholder="Phone Number" required type="tel" x-model="quoteRequest.phone"/>
+            </div>
+          </div>
+          <!-- Project Details -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-neon-accent">Project Details</h3>
+            <div class="space-y-4">
+              <select class="w-full bg-white/80 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" required x-model="quoteRequest.serviceCategory">
+                <option value="">Select Service Category</option>
+                <option value="software-development">Software Development</option>
+                <option value="digital-marketing">Digital Marketing</option>
+                <option value="ecommerce">E-Commerce Solutions</option>
+                <option value="data-analytics">Data & Analytics</option>
+                <option value="other">Other</option>
+              </select>
+              <select class="w-full bg-white/80 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" required x-model="quoteRequest.projectType">
+                <option value="">Select Project Type</option>
+                <option value="new-project">New Project</option>
+                <option value="project-enhancement">Existing Project Enhancement</option>
+                <option value="consultation">Consultation</option>
+                <option value="ongoing-support">Ongoing Support</option>
+              </select>
+              <textarea class="w-full bg-white/80 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" placeholder="Detailed Project Description" required rows="4" x-model="quoteRequest.projectDescription"></textarea>
+              <div class="space-y-4">
+                <label class="block">
+                  <span class="text-gray-900">Estimated Budget Range</span>
+                  <select class="w-full bg-white/80 p-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" required x-model="quoteRequest.budgetRange">
+                    <option value="">Select Budget Range</option>
+                    <option value="0-5000">$0 - $5,000</option>
+                    <option value="5001-20000">$5,001 - $20,000</option>
+                    <option value="20001-50000">$20,001 - $50,000</option>
+                    <option value="50001-100000">$50,001 - $100,000</option>
+                    <option value="100000+">$100,000+</option>
+                  </select>
+                </label>
+                <label class="block">
+                  <span class="text-gray-900">Project Timeline</span>
+                  <select class="w-full  p-4 text-neon-accent rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-neon-accent transition" required x-model="quoteRequest.projectTimeline">
+                    <option value="">Select Timeline</option>
+                    <option value="urgent">Urgent (1-2 weeks)</option>
+                    <option value="short-term">Short-term (1-3 months)</option>
+                    <option value="medium-term">Medium-term (3-6 months)</option>
+                    <option value="long-term">Long-term (6+ months)</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
-       </div>
-      </div>
-     </div>
-     <div class="mt-8">
-      <button class="w-full bg-neon-accent text-primary-blue px-6 py-3 rounded-lg hover:scale-105 transition-transform" type="submit">
-       Get Instant Quote
-      </button>
-     </div>
-    </form>
-   </div>
+        <div class="mt-8">
+          <button class="w-full bg-neon-accent text-primary-blue px-6 py-3 rounded-lg shadow-lg hover:scale-105 transition-transform" type="submit">
+            Get Instant Quote
+          </button>
+        </div>
+      </form>
+    </div>
   </section>
 <!-- Contact Information -->
 <section class="container mx-auto py-16 text-center bg-gray-900 rounded-lg shadow-lg">
     <h2 class="text-4xl font-bold text-neon-accent mb-6">
       Contact Us
     </h2>
-    <p class="text-lg text-gray-300 mb-4">
+    <p class="text-lg text-gray-900 mb-4">
       For any inquiries, reach us through:
     </p>
     <div class="space-y-4">
@@ -249,7 +234,7 @@
         <h3 class="text-2xl font-bold text-neon-accent">
           Headquarters
         </h3>
-        <p class="text-gray-300">
+        <p class="text-gray-900">
           123 Innovation Way, Tech City, ST 12345
         </p>
         <p class="text-lg">
@@ -263,7 +248,7 @@
         <h3 class="text-2xl font-bold text-neon-accent">
           Regional Office
         </h3>
-        <p class="text-gray-300">
+        <p class="text-gray-900">
           456 Digital Plaza, Innovation District, ST 67890
         </p>
         <p class="text-lg">
